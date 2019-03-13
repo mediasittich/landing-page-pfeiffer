@@ -5,6 +5,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
+        watchContentBase: true,
         port: 3000,
         open: true,
     },
