@@ -1,1 +1,29 @@
-body { background-color: lightgreen; }
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+/* Variables */
+
+$dark-green: #2A5848;
+$medium-green: #448B75;
+$light-green: #50A489;
+$font-color: $dark-green;
+$body-font: 'Roboto', sans-serif;
+$base-font-size: 25px;
+$body-font-weight: 400;
+$body-line-height: 35px;
+$body-letter-spacing: .02em;
+$heading-font-size: 40px;
+$heading-font-weight: 500;
+$heading-line-height: 45px;
+$heading-letter-spacing: .22em;
+$heading-transform: uppercase;
+$border: 2px solid $dark-green;
+
+
+body {
+    font-family: $body-font;
+    font-size: $base-font-size;
+    color: $font-color;
+}
+
