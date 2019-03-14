@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -19,11 +20,26 @@ module.exports = {
                 removeComments: true,
                 collapseWhitespace: true
             }
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'main.scss',
         })
     ],
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }
+        ]
     },
     resolve: {
         modules: [
