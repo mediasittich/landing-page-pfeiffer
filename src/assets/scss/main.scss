@@ -4,6 +4,7 @@
 
 /* Variables */
 
+$white: #FFF;
 $dark-green: #2A5848;
 $medium-green: #448B75;
 $light-green: #50A489;
@@ -20,6 +21,7 @@ $heading-letter-spacing: .22em;
 $heading-transform: uppercase;
 $border: 2px solid $dark-green;
 
+/* Global Styles */
 
 body {
     font-family: $body-font;
@@ -27,3 +29,7 @@ body {
     color: $font-color;
 }
 
+section {
+    max-width: 1460px;
+    padding: 0 230px 0;
+}
