@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const devMode = process.env.NODE_ENV !== 'production'
+
 module.exports = {
     entry: './src/index.js',
     devtool: 'source-map',
@@ -14,7 +16,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Pfeiffer & Partner',
-            template: 'dist/index.html',
+            filename: 'index.html',
+            template: './src/index.html',
             inject: true,
             minify: {
                 removeComments: true,
@@ -22,7 +25,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: 'main.scss',
+            filename: 'main.css',
         })
     ],
     output: {
@@ -34,7 +37,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',
+                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
                 ]
