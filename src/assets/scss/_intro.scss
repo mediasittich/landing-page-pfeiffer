@@ -1,0 +1,29 @@
+/* Intro Section */
+
+.intro {
+    height: 100vh;
+    background-color: $light-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* TODO: add background */
+}
+
+.intro-inner {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .intro-title {
+        font-size: 70px;
+        letter-spacing: .22em;
+    }
+
+    .intro-subtitle {
+        font-weight: $heading-font-weight;
+        letter-spacing: .16em;
+        font-style: italic;
+    }
+}

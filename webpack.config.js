@@ -48,6 +48,19 @@ module.exports = {
                     devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                 ]
+            },
+            {
+                test: /\.(png|svg.jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/',
+                            useRelativePath: true,
+                        }
+                    }
+                ]
             }
         ]
     },

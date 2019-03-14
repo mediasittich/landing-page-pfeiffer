@@ -1,0 +1,48 @@
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+/* Variables */
+
+$white: #FFF;
+$dark-green: #2A5848;
+$medium-green: #448B75;
+$light-green: #50A489;
+$font-color: $dark-green;
+$body-font: 'Roboto', sans-serif;
+$base-font-size: 25px;
+$body-font-weight: 400;
+$body-line-height: 35px;
+$body-letter-spacing: .02em;
+$heading-font-size: 40px;
+$heading-font-weight: 500;
+$heading-line-height: 45px;
+$heading-letter-spacing: .22em;
+$heading-transform: uppercase;
+$border: 2px solid $dark-green;
+
+/* TODO: add media queries sizes */
+/* TODO: add media queries */
+
+/* Global Styles */
+
+body {
+    font-family: $body-font;
+    font-size: $base-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+    letter-spacing: $body-letter-spacing;
+    color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    letter-spacing: $heading-letter-spacing;
+    text-transform: $heading-transform;
+}
+
+section {
+    width: 1460px;
+    padding: 0 230px 0;
+}
