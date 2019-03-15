@@ -1,6 +1,6 @@
 /* Intro Section */
 
-.intro {
+.landing {
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -23,19 +23,19 @@
     }
 }
 
-.intro-inner {
+.landing-inner {
     color: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .intro-title {
+    .landing-title {
         font-size: 2.8rem; // 70px @1920px
         letter-spacing: .22em;
     }
 
-    .intro-subtitle {
+    .landing-subtitle {
         font-weight: $heading-font-weight;
         letter-spacing: .16em;
         font-style: italic;
