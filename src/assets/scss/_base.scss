@@ -10,7 +10,8 @@ $medium-green: #448B75;
 $light-green: #50A489;
 $font-color: $dark-green;
 $body-font: 'Roboto', sans-serif;
-$base-font-size: 25px;
+$base-font-size: 16px;
+$body-font-size: 25px;
 $body-font-weight: 400;
 $body-line-height: 35px;
 $body-letter-spacing: .02em;
@@ -21,14 +22,53 @@ $heading-letter-spacing: .22em;
 $heading-transform: uppercase;
 $border: 2px solid $dark-green;
 
-/* TODO: add media queries sizes */
-/* TODO: add media queries */
+/* Media Queries Sizes */
+
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$lg-desktop: 1800px;
+
+/* Fluid Typography Mixin*/
+/* https://codepen.io/dbox/pen/meaMba */
+
+@mixin fluid-type($min-font-size, $max-font-size, $lower-range: $tablet-portrait, $upper-range: $lg-desktop) {
+    font-size: calc(
+        #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{ (($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1) )) })
+    );
+
+    @media (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+    @media (min-width: $upper-range) {
+        font-size: $max-font-size;
+    }
+}
+
+/* Media Queries Mixins */
+
+@mixin tablet-portrait-up {
+    @media (min-width: $tablet-portait) { @content; }
+}
+@mixin tablet-landscape-up {
+    @media (min-width: $tablet-landscape) { @content; }
+}
+@mixin desktop-up {
+    @media (min-width: $desktop) { @content; }
+}
+@mixin lg-desktop-up {
+    @media (min-width: $lg-desktop) { @content; }
+}
 
 /* Global Styles */
 
+html {
+    // font-size: $base-font-size;
+    @include fluid-type($base-font-size, $body-font-size);
+}
+
 body {
     font-family: $body-font;
-    font-size: $base-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
     letter-spacing: $body-letter-spacing;
@@ -42,7 +82,16 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: $heading-transform;
 }
 
-section {
-    width: 1460px;
-    padding: 0 230px 0;
+/* Section Titles h2 */
+
+main > section {
+    border: 1px solid deeppink;
+    width: 90%; // TODO: this needs to be set for different screen sizes @media
+    max-width: 91.25rem; // 1460px
+    margin: 0 auto; // TODO: this needs to be set for different screen sizes @media
+    // padding: 0 9.2rem; // TODO: this needs to be set for different screen sizes @media
+
+    @include lg-desktop-up {
+        padding: 0 9.2rem;
+    }
 }
