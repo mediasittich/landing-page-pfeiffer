@@ -6,10 +6,17 @@
     margin: 0;
     //padding: 0 auto;
     background-color: $light-green;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
     display: flex;
     justify-content: center;
     align-items: center;
     /* TODO: add background */
+
+    @include tablet-portrait-up {
+        background-image: url('../img/Startbild_1920x1080.jpg');
+    }
 
     @include lg-desktop-up {
         padding: 0 9.2rem;

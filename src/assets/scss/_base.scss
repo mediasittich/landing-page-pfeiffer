@@ -48,7 +48,7 @@ $lg-desktop: 1800px;
 /* Media Queries Mixins */
 
 @mixin tablet-portrait-up {
-    @media (min-width: $tablet-portait) { @content; }
+    @media (min-width: $tablet-portrait) { @content; }
 }
 @mixin tablet-landscape-up {
     @media (min-width: $tablet-landscape) { @content; }

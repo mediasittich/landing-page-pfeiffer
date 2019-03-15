@@ -50,7 +50,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|svg.jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -58,6 +58,28 @@ module.exports = {
                             name: '[name].[ext]',
                             outputPath: 'assets/',
                             useRelativePath: true,
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlace: false,
+                            },
+                            webp: {
+                                quality: 75,
+                            }
                         }
                     }
                 ]
