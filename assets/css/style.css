@@ -119,12 +119,7 @@ main > section:first-of-type {
   grid-template-columns: 1fr;
   grid-template-rows: auto repeat(3, 1fr);
   grid-template-areas: "service-title" "box-1" "box-2" "box-3"; }
-  @media (min-width: 600px) {
-    .service {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto repeat(2, 1fr);
-      grid-template-areas: "service-title service-title" "box-1 box-2" "box-3 box-3"; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     .service {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto 1fr;
