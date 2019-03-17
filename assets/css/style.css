@@ -44,8 +44,8 @@ img {
 
 /* Section Titles h2 */
 main > section {
-  width: 90%;
-  max-width: 91.25rem;
+  width: 76%;
+  max-width: 58.4rem;
   margin: 0 auto;
   margin-bottom: 6rem; }
   @media (min-width: 1800px) {
@@ -57,7 +57,7 @@ main > section:first-of-type {
   margin-top: 6rem; }
   @media (min-width: 1800px) {
     main > section:first-of-type {
-      margin-top: 12rem; } }
+      margin-bottom: 12rem; } }
 
 /* Grid Containers */
 .container {
@@ -102,9 +102,6 @@ main > section:first-of-type {
 .intro {
   grid-template-columns: 1fr;
   grid-template-areas: "intro-text" "intro-icon"; }
-  .intro img {
-    position: relative;
-    height: 100vh; }
   @media (min-width: 600px) {
     .intro {
       grid-template-columns: 1fr 1fr;
@@ -114,7 +111,9 @@ main > section:first-of-type {
   grid-area: intro-text; }
 
 .intro-icon {
-  grid-area: intro-icon; }
+  grid-area: intro-icon;
+  display: block;
+  width: 100%; }
 
 .service {
   grid-template-columns: 1fr;
@@ -136,15 +135,6 @@ main > section:first-of-type {
   text-align: center;
   margin-bottom: 6rem; }
 
-.service-box {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 2px solid #2A5848;
-  line-height: 16.72rem;
-  text-align: center; }
-
 .box-1 {
   grid-area: box-1; }
 
@@ -153,6 +143,52 @@ main > section:first-of-type {
 
 .box-3 {
   grid-area: box-3; }
+
+.service-box {
+  display: inline-block; }
+
+.flip-card {
+  width: 16.72rem;
+  height: 16.72rem;
+  perspective: 1000px; }
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform .8s;
+  transform-style: preserve-3d; }
+
+.flip-card:hover .flip-card__inner {
+  transform: rotateY(180deg); }
+
+.flip-card__front,
+.flip-card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid #2A5848;
+  border-radius: 50%; }
+
+.flip-card__front {
+  background-color: #FFF; }
+  .flip-card__front h3 {
+    display: inline-block;
+    margin: 0;
+    line-height: 16.72rem; }
+
+.flip-card__back {
+  background-color: #FFF;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .flip-card__back p {
+    padding: 0 2rem; }
 
 .produkte {
   grid-template-columns: 1fr;

@@ -102,8 +102,8 @@ img {
 
 main > section {
     // border: 1px solid deeppink; // highlight for dev
-    width: 90%; // TODO: this needs to be set for different screen sizes @media
-    max-width: 91.25rem; // 1460px
+    width: 76%; // TODO: this needs to be set for different screen sizes @media
+    max-width: 58.4rem; // 1460px
     margin: 0 auto; // TODO: this needs to be set for different screen sizes @media
     // padding: 0 9.2rem; // TODO: this needs to be set for different screen sizes @media
     margin-bottom: 6rem;
@@ -117,7 +117,7 @@ main > section:first-of-type {
     margin-top: 6rem;
 
     @include lg-desktop-up {
-        margin-top: 12rem;
+        margin-bottom: 12rem;
     }
 }
 

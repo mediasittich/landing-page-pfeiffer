@@ -4,24 +4,19 @@
         "intro-text"
         "intro-icon";
 
-    img {
-        position: relative;
-        height: 100vh;
-    }
-
     @include tablet-portrait-up {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "intro-icon intro-text";
     }
-
 }
 
 .intro-text {
-    grid-area: intro-text;
-    
+    grid-area: intro-text; 
 }
 
 .intro-icon {
     grid-area: intro-icon;
+    display: block;
+    width: 100%; // TODO: Set max-width/height
 }
