@@ -4,15 +4,13 @@
     height: 100vh;
     width: 100vw;
     margin: 0;
-    //padding: 0 auto;
     background-color: $light-green;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top left;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* TODO: add background */
 
     @include tablet-portrait-up {
         background-image: url('../img/Startbild_1920x1080.jpg');
@@ -31,6 +29,7 @@
     align-items: center;
 
     .landing-title {
+        // TODO: font-size responsive, line breaks on  screen < 600px
         font-size: 2.8rem; // 70px @1920px
         letter-spacing: .22em;
     }

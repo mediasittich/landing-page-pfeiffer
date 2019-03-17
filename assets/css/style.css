@@ -74,11 +74,10 @@ main > section:first-of-type {
   background-color: #50A489;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: center center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* TODO: add background */ }
+  align-items: center; }
   @media (min-width: 600px) {
     .landing {
       background-image: url("../img/Startbild_1920x1080.jpg"); } }
