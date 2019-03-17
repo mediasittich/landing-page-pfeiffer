@@ -148,8 +148,8 @@ main > section:first-of-type {
   display: inline-block; }
 
 .flip-card {
-  width: 16.72rem;
-  height: 16.72rem;
+  width: calc(((76vw - 2 * 2rem) / 3) - 2 * 2px);
+  height: calc(((76vw - 2 * 2rem) / 3) - 2 * 2px);
   perspective: 1000px; }
 
 .flip-card__inner {
