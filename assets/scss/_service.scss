@@ -75,6 +75,10 @@
     backface-visibility: hidden;
     border: $border;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flip-card__front {
@@ -83,17 +87,12 @@
     h3 {
         display: inline-block;
         margin: 0;
-        line-height: 16.72rem;
     }
 }
 
 .flip-card__back {
     background-color: $white;
     transform: rotateY(180deg);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     p {
         padding: 0 2rem;

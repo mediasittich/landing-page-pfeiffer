@@ -172,21 +172,20 @@ main > section:first-of-type {
   height: 100%;
   backface-visibility: hidden;
   border: 2px solid #2A5848;
-  border-radius: 50%; }
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .flip-card__front {
   background-color: #FFF; }
   .flip-card__front h3 {
     display: inline-block;
-    margin: 0;
-    line-height: 16.72rem; }
+    margin: 0; }
 
 .flip-card__back {
   background-color: #FFF;
-  transform: rotateY(180deg);
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  transform: rotateY(180deg); }
   .flip-card__back p {
     padding: 0 2rem; }
 
