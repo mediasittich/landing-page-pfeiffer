@@ -1,0 +1,54 @@
+.service {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-areas:
+        "service-title"
+        "box-1"
+        "box-2"
+        "box-3";
+
+    @include tablet-portrait-up {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto repeat(2, 1fr);
+        grid-template-areas:
+            "service-title service-title"
+            "box-1 box-2"
+            "box-3 box-3";
+    }
+    @include desktop-up {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+        "service-title service-title service-title"
+        "box-1 box-2 box-3";
+    }
+}
+
+.service-title {
+    grid-area: service-title;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.service-box {
+    display: inline-block;
+    
+    width: 100%; // 16.72rem
+    height: 100%; // 16.72rem
+    border-radius: 100%;
+    border: $border;
+    line-height: 16.72rem;
+    text-align: center;
+}
+
+.box-1 {
+    grid-area: box-1;
+}
+
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-3 {
+    grid-area: box-3;
+}

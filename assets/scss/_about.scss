@@ -1,0 +1,25 @@
+.about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "about-text"
+        "about-img";
+
+    @include tablet-portrait-up {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "about-img about-text";
+    }
+
+}
+
+.about-text {
+    grid-area: about-text;
+}
+
+.about-img {
+    grid-area: about-img;
+    
+    img {
+        width: 100%;
+    }
+}

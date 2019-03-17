@@ -1,0 +1,41 @@
+.produkte {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "produkte-title"
+        "produkte-text"
+        "produkte-slider-1"
+        "produkte-slider-2"
+        "produkte-slider-3";
+
+    @include tablet-portrait-up {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            ". produkte-title"
+            "produkte-slider-1 produkte-text"
+            "produkte-slider-1 produkte-slider-2"
+            "produkte-slider-3 ."
+    }
+}
+
+.produkte-title {
+    grid-area: produkte-title;
+    margin-bottom: 0;
+}
+
+.produkte-text {
+    grid-area: produkte-text;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.produkte-slider-1 {
+    grid-area: produkte-slider-1;
+}
+
+.produkte-slider-2 {
+    grid-area: produkte-slider-2;
+}
+
+.produkte-slider-3 {
+    grid-area: produkte-slider-3;
+}

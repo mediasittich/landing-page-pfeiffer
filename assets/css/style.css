@@ -23,22 +23,48 @@ body {
   letter-spacing: 0.02em;
   color: #2A5848; }
 
+a {
+  color: #2A5848;
+  text-decoration: none;
+  font-style: italic;
+  letter-spacing: .16em; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 45px;
   letter-spacing: 0.22em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2rem; }
+
+img {
+  width: 100%; }
 
 /* Section Titles h2 */
 main > section {
-  border: 1px solid deeppink;
   width: 90%;
   max-width: 91.25rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 6rem; }
   @media (min-width: 1800px) {
     main > section {
+      margin-bottom: 12rem;
       padding: 0 9.2rem; } }
 
+main > section:first-of-type {
+  margin-top: 6rem; }
+  @media (min-width: 1800px) {
+    main > section:first-of-type {
+      margin-top: 12rem; } }
+
+/* Grid Containers */
+.container {
+  display: grid;
+  grid-column-gap: 2rem; }
+
+/* Grid items */
 /* Components */
 /* Intro Section */
 .landing {
@@ -73,5 +99,118 @@ main > section {
     font-weight: 500;
     letter-spacing: .16em;
     font-style: italic; }
+
+.intro {
+  grid-template-columns: 1fr;
+  grid-template-areas: "intro-text" "intro-icon"; }
+  .intro img {
+    position: relative;
+    height: 100vh; }
+  @media (min-width: 600px) {
+    .intro {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "intro-icon intro-text"; } }
+
+.intro-text {
+  grid-area: intro-text; }
+
+.intro-icon {
+  grid-area: intro-icon; }
+
+.service {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto repeat(3, 1fr);
+  grid-template-areas: "service-title" "box-1" "box-2" "box-3"; }
+  @media (min-width: 600px) {
+    .service {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto repeat(2, 1fr);
+      grid-template-areas: "service-title service-title" "box-1 box-2" "box-3 box-3"; } }
+  @media (min-width: 1200px) {
+    .service {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "service-title service-title service-title" "box-1 box-2 box-3"; } }
+
+.service-title {
+  grid-area: service-title;
+  text-align: center;
+  margin-bottom: 6rem; }
+
+.service-box {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 2px solid #2A5848;
+  line-height: 16.72rem;
+  text-align: center; }
+
+.box-1 {
+  grid-area: box-1; }
+
+.box-2 {
+  grid-area: box-2; }
+
+.box-3 {
+  grid-area: box-3; }
+
+.produkte {
+  grid-template-columns: 1fr;
+  grid-template-areas: "produkte-title" "produkte-text" "produkte-slider-1" "produkte-slider-2" "produkte-slider-3"; }
+  @media (min-width: 600px) {
+    .produkte {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: ". produkte-title" "produkte-slider-1 produkte-text" "produkte-slider-1 produkte-slider-2" "produkte-slider-3 ."; } }
+
+.produkte-title {
+  grid-area: produkte-title;
+  margin-bottom: 0; }
+
+.produkte-text {
+  grid-area: produkte-text;
+  margin-top: 2rem;
+  margin-bottom: 6rem; }
+
+.produkte-slider-1 {
+  grid-area: produkte-slider-1; }
+
+.produkte-slider-2 {
+  grid-area: produkte-slider-2; }
+
+.produkte-slider-3 {
+  grid-area: produkte-slider-3; }
+
+.referenzen-slider {
+  width: 89.93%;
+  height: auto;
+  border: 2px solid #2A5848;
+  margin: 0 auto; }
+
+.about {
+  grid-template-columns: 1fr;
+  grid-template-areas: "about-text" "about-img"; }
+  @media (min-width: 600px) {
+    .about {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "about-img about-text"; } }
+
+.about-text {
+  grid-area: about-text; }
+
+.about-img {
+  grid-area: about-img; }
+  .about-img img {
+    width: 100%; }
+
+.kontakt {
+  text-align: center; }
+
+.main-footer {
+  text-align: center;
+  padding-bottom: 4rem; }
+  .main-footer a {
+    font-style: normal;
+    letter-spacing: 0.02em; }
 
 /*# sourceMappingURL=style.css.map */
