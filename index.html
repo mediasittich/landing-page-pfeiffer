@@ -92,10 +92,10 @@
 
                 <div class="slider-container">
                     <div class="slider-1">
-                        <img onclick="openLightbox(); currentSlide(1)" data-slider-id="1" data-slide-number="1" src="./assets/img/Stuhl_seitlich.jpg" alt="">
+                        <img onclick="openLightbox(this); currentSlide(1)" data-slider-id="1" data-slide-number="1" src="./assets/img/Stuhl_seitlich.jpg" alt="">
                     </div>
                     <div class="slider-1">
-                        <img onclick="openLightbox(); currentSlide(2)" data-slider-id="1" data-slide-number="2" src="./assets/img/Stuhl_Front.jpg" alt="">
+                        <img onclick="openLightbox(this); currentSlide(2)" data-slider-id="1" data-slide-number="2" src="./assets/img/Stuhl_Front.jpg" alt="">
                     </div>
 
                     <a class='prev' onclick="nextSlide(-1, 0)">
@@ -206,6 +206,7 @@
         </span>
         <div class="modal-content">
             <!-- Images in Lightbox -->
+            <div id="lb-img-container"></div>
             
             <!-- Controls for Lightbox -->
             <a class='prev' onclick="nextSlide(-1, 0)">

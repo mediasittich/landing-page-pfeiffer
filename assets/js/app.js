@@ -32,9 +32,13 @@ function showSlide(n, num) {
 
 // Lightbox
 var lb = document.getElementById('lb-modal');
+var lbImgContainer = document.getElementById('lb-img-container')
 var close = document.querySelector('.close')
 
-function openLightbox() {
+function openLightbox(elem) {
+    // console.log(e.target)
+    console.log(elem.src)
+    injectImg(elem.src)
     lb.style.display = 'block'
 }
 
@@ -44,6 +48,14 @@ close.addEventListener('click', function() {
 
 function currentSlide(slideNumber) {
     console.log(slideNumber)
+}
+
+function injectImg(imgSrc) {
+    var lbImg = document.createElement('img');
+    lbImg.setAttribute('src', imgSrc);
+    lbImg.setAttribute('class', 'lb-img');
+
+    lbImgContainer.appendChild(lbImg);
 }
 
 // Clean up later...
