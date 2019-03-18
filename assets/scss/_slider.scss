@@ -1,11 +1,34 @@
 .slider-container {
     position: relative;
+    padding: 0 2rem;
 
     img { width: 100%; }
 }
 
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    
+    img {
+        width: 4rem;
+        // background-color: deeppink;
+    }
+}
+.prev {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.next {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
 .slider-1,
 .slider-2,
-.slider-3 {
+.slider-3,
+.slider-refs {
     display: none;
 }

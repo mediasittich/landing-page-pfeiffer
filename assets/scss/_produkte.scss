@@ -30,12 +30,23 @@
 
 .produkte-slider-1 {
     grid-area: produkte-slider-1;
+
+    img {
+        width: 14.96rem;
+        height: auto;
+    }
 }
 
 .produkte-slider-2 {
     grid-area: produkte-slider-2;
+
+    img {
+        width: 20.48rem;
+        height: auto;
+    }
 }
 
 .produkte-slider-3 {
     grid-area: produkte-slider-3;
+    margin-top: 6rem;
 }

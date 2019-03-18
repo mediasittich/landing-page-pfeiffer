@@ -49,7 +49,9 @@
 
 .flip-card {
     width: calc(((76vw - 2 * 2rem) / 3) - 2 * 2px); // 16.72rem;
+    max-width: 16.72rem;
     height: calc(((76vw - 2 * 2rem) / 3) - 2 * 2px); // 16.72rem;
+    max-height: 16.72rem;
     perspective: 1000px;
 }
 

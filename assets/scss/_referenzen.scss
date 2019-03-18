@@ -1,8 +1,14 @@
 .referenzen {}
 
-.referenzen-slider {
-    width: 89.93%;
-    height: auto;
+.referenzen-slider {}
+
+.slider-refs {
+    max-width: 52.52rem;
+    max-height: 28.12rem;
     border: $border;
-    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        line-height: 28.12rem;
+    }
 }
