@@ -13,6 +13,11 @@
     }
 }
 
+.produkte-slider-3 .slider-container { // move to _produkte.scss later
+    position: relative;
+    left: calc(4.52rem * 1.5);
+}
+
 .vertical {
     img { 
         width: 15.04rem; 
