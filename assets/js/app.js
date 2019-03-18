@@ -44,6 +44,9 @@ function openLightbox(elem) {
 
 close.addEventListener('click', function() {
     lb.style.display = 'none'
+
+    // console.log(lbImgContainer.childNodes)
+    lbImgContainer.removeChild(lbImgContainer.childNodes[0])
 })
 
 function currentSlide(slideNumber) {
