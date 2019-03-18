@@ -1,6 +1,8 @@
 .slider-container {
     position: relative;
-    padding: 0 2rem;
+    padding: 0;
+
+    & > * { margin: 0 2rem; }
 
     img { width: 100%; }
 }
@@ -18,12 +20,12 @@
 }
 .prev {
     left: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -50%);
 }
 
 .next {
     right: 0;
-    transform: translate(50%, -50%);
+    transform: translate(100%, -50%);
 }
 
 .slider-1,

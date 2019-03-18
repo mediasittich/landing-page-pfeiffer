@@ -3,12 +3,16 @@
 .referenzen-slider {}
 
 .slider-refs {
-    max-width: 52.52rem;
-    max-height: 28.12rem;
+    width: calc(76vw - 4rem);
+    height: calc((76vw - 4rem) / 1.86);
     border: $border;
+    position: relative;
 
     h2 {
         text-align: center;
-        line-height: 28.12rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
