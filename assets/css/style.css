@@ -236,6 +236,9 @@ main > section:first-of-type {
 
 .about-text {
   grid-area: about-text; }
+  .about-text a {
+    display: inline-block;
+    margin-top: 2rem; }
 
 .about-img {
   grid-area: about-img; }
