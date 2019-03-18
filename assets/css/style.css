@@ -263,22 +263,36 @@ main > section:first-of-type {
 /* Slider */
 .slider-container {
   position: relative;
-  padding: 0; }
-  .slider-container > * {
-    margin: 0 2rem; }
-  .slider-container img {
-    width: 100%;
-    transition: 1s;
-    cursor: pointer; }
+  padding: 0;
+  height: auto; }
+  .slider-container.vertical {
+    width: 15.04rem;
+    left: 4.52rem; }
+  .slider-container.horizontal {
+    width: 20.56rem; }
+
+.vertical img {
+  width: 15.04rem;
+  transition: 1s;
+  cursor: pointer; }
+
+.horizontal img {
+  width: 20.56rem;
+  transition: 1s;
+  cursor: pointer; }
 
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%; }
+  top: 50%;
+  display: block;
+  width: 4.52rem;
+  height: 4.52rem; }
   .prev img,
   .next img {
-    width: 4rem; }
+    width: 100%;
+    height: auto; }
 
 .prev {
   left: 0;
@@ -317,7 +331,7 @@ main > section:first-of-type {
     padding: 2rem; }
   .modal-content .lb-img {
     display: block;
-    max-width: 70%;
+    width: 22.56rem;
     height: auto;
     margin: 0 auto; }
   .modal-content .prev {
