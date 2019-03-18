@@ -1,3 +1,4 @@
+/* Slider */
 .slider-container {
     position: relative;
     padding: 0;
@@ -15,7 +16,6 @@
     
     img {
         width: 4rem;
-        // background-color: deeppink;
     }
 }
 .prev {
@@ -33,4 +33,24 @@
 .slider-3,
 .slider-refs {
     display: none;
+}
+
+/* Lightbox */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $white90;
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 58.4rem;
 }
