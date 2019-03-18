@@ -1,0 +1,39 @@
+/* Lightbox */
+.modal {
+    // display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: $white90;
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    max-width: 58.4rem;
+
+    .prev {
+        transform: translate(-50%, -50%);
+    }
+
+    .next {
+        transform: translate(50%, -50%);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    
+    img {
+        width: 2rem;
+    }
+}

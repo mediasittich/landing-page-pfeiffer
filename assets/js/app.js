@@ -29,3 +29,39 @@ function showSlide(n, num) {
     // console.log(slides.length)
     // console.log(slideId)
 }
+
+// Lightbox
+var lb = document.getElementById('lb-modal');
+var close = document.querySelector('.close')
+
+function openLightbox() {
+    lb.style.display = 'block'
+}
+
+close.addEventListener('click', function() {
+    lb.style.display = 'none'
+})
+
+function currentSlide(slideNumber) {
+    console.log(slideNumber)
+}
+
+// Clean up later...
+
+// var sliderContainers = document.querySelectorAll('.slider-container');
+// sliderContainers.forEach(function(container) {
+//     container.addEventListener('click', function (e) {
+//         // console.log(e.target)
+//         if (e.target.hasAttribute('data-slider-id')) {
+//             // console.log(e.target.src)
+//             // console.log(e.target.dataset.sliderId)
+//             // console.log(e.target.dataset.slideNumber)
+//             getNext(e.target.dataset.sliderId, e.target.dataset.slideNumber)
+//         }
+        
+//     })
+// })
+
+// function getNext(sliderId, slideNumber) {
+//     console.log(sliderId, slideNumber)
+// }

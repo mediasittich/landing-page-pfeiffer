@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -92,10 +92,10 @@
 
                 <div class="slider-container">
                     <div class="slider-1">
-                        <img src="./assets/img/Stuhl_seitlich.jpg" alt="">
+                        <img onclick="openLightbox(); currentSlide(1)" data-slider-id="1" data-slide-number="1" src="./assets/img/Stuhl_seitlich.jpg" alt="">
                     </div>
                     <div class="slider-1">
-                        <img src="./assets/img/Stuhl_Front.jpg" alt="">
+                        <img onclick="openLightbox(); currentSlide(2)" data-slider-id="1" data-slide-number="2" src="./assets/img/Stuhl_Front.jpg" alt="">
                     </div>
 
                     <a class='prev' onclick="nextSlide(-1, 0)">
@@ -110,16 +110,16 @@
             <div class="item produkte-slider-2">
                 <div class="slider-container">
                     <div class="slider-2">
-                        <img src="./assets/img/Tisch_Front.jpg" alt="">
+                        <img data-slider-id="2" data-slide-number="1" src="./assets/img/Tisch_Front.jpg" alt="">
                     </div>
                     <div class="slider-2">
-                        <img src="./assets/img/Tisch_oben.jpg" alt="">
+                        <img data-slider-id="2" data-slide-number="2" src="./assets/img/Tisch_oben.jpg" alt="">
                     </div>
                     <div class="slider-2">
-                        <img src="./assets/img/Tisch_unten.jpg" alt="">
+                        <img data-slider-id="2" data-slide-number="3" src="./assets/img/Tisch_unten.jpg" alt="">
                     </div>
                     <div class="slider-2">
-                        <img src="./assets/img/Tisch_detail_01.jpg" alt="">
+                        <img data-slider-id="2" data-slide-number="4" src="./assets/img/Tisch_detail_01.jpg" alt="">
                     </div>
 
                     <a class='prev' onclick="nextSlide(-1, 1)">
@@ -133,10 +133,10 @@
             <div class="item produkte-slider-3">
                 <div class="slider-container">
                     <div class="slider-3">
-                        <img src="./assets/img/Leuchtenhalter_01.jpg" alt="">
+                        <img data-slider-id="3" data-slide-number="1" src="./assets/img/Leuchtenhalter_01.jpg" alt="">
                     </div>
                     <div class="slider-3">
-                        <img src="./assets/img/Leuchtenhalter_01.jpg" alt="">
+                        <img data-slider-id="3" data-slide-number="2" src="./assets/img/Leuchtenhalter_01.jpg" alt="">
                     </div>
 
                     <a class='prev' onclick="nextSlide(-1, 2)">
@@ -201,8 +201,19 @@
 
     <!-- Modal for Lightbox -->
     <div id="lb-modal" class="modal">
+        <span class="close">
+            <img src="./assets/icons/Kreuz_schliessen.svg" alt="">
+        </span>
         <div class="modal-content">
+            <!-- Images in Lightbox -->
             
+            <!-- Controls for Lightbox -->
+            <a class='prev' onclick="nextSlide(-1, 0)">
+                <img src="./assets/icons/Pfeil_links.svg" alt="">
+            </a>
+            <a class='next' onclick="nextSlide(1, 0)">
+                <img src="./assets/icons/Pfeil_rechts.svg" alt="">
+            </a>
         </div>
     </div>
     <!-- / Modal for Lightbox -->
