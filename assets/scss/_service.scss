@@ -36,7 +36,10 @@
 
 .box-1 {
     grid-area: box-1;
-    justify-self: start;
+
+    @include lg-desktop-up {
+        justify-self: start;
+    }
 
     .flip-card__front,
     .flip-card__back {
@@ -46,8 +49,10 @@
 
 .box-2 {
     grid-area: box-2;
-    justify-self: center;
-
+    
+    @include lg-desktop-up {
+        justify-self: center;
+    }
     color: $medium-green;
 
     .flip-card__front,
@@ -58,8 +63,10 @@
 
 .box-3 {
     grid-area: box-3;
-    justify-self: end;
 
+    @include lg-desktop-up {
+        justify-self: end;
+    }
     color: $light-green;
 
     .flip-card__front,
