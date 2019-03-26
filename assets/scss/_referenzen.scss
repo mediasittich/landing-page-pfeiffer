@@ -1,0 +1,19 @@
+/* Referenzen Section */
+.referenzen {
+    margin: 0 25px 75px;    
+
+    @include lg-desktop-up {
+        margin: 0 230px 300px;
+    }
+}
+
+.referenzen-slider .slider-container {
+    height: 295px;
+    width: 270px;
+    margin: 0 auto;
+
+    @include lg-desktop-up {
+        height: 703px;
+        width: 1460px;
+    }
+}

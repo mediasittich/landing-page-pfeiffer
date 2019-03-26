@@ -1,0 +1,60 @@
+/* About Section */
+.about {
+    margin: 0 25px 75px;
+    display: grid;
+    grid-template-columns: 1fr;   
+    grid-row-gap: 50px;
+    grid-template-areas:
+            "about-text"
+            "about-img";
+
+    @include lg-desktop-up {
+        margin: 0 230px 300px;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+        grid-template-areas:
+            "about-img about-text";
+    }
+}
+
+.about-text {
+    grid-area: about-text;
+
+    @include lg-desktop-up {
+        display: flex;
+        align-items: center;
+    }
+}
+.text-block {
+    h2,
+    p {
+        margin-bottom: 25px;
+
+        @include lg-desktop-up {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.about-img {
+    grid-area: about-img;
+    height: 369.7px;
+    width: 270px;
+    margin: 0 auto;
+
+    @include lg-desktop-up {
+        height: 512px;
+        width: 374px;
+    }
+}
+
+.referenzen-slider .slider-container {
+    height: 295px;
+    width: 270px;
+    margin: 0 auto;
+
+    @include lg-desktop-up {
+        height: 703px;
+        width: 1460px;
+    }
+}
