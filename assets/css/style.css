@@ -186,7 +186,8 @@ img {
 .flip-card {
   display: block;
   width: 270px;
-  height: 270px; }
+  height: 270px;
+  cursor: pointer; }
   @media (min-width: 1200px) {
     .flip-card {
       width: 418px;
@@ -203,6 +204,7 @@ img {
 .flip-card:hover .flip-card__inner,
 .flip-card:focus .flip-card__inner,
 .flip-card:active .flip-card__inner {
+  outline: none;
   transform: rotateY(180deg); }
 
 .flip-card__front,
