@@ -3,6 +3,10 @@
     margin: 0 25px 75px;
     text-align: center;
 
+    @include lg-desktop-up {
+        margin: 0 230px 300px;
+    }
+
     h2 {
         margin-bottom: 25px;
 
@@ -11,7 +15,7 @@
         }
     }
 
-    @include lg-desktop-up {
-        margin: 0 230px 300px;
+    a {
+        font-weight: 500;
     }
 }

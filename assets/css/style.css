@@ -335,6 +335,8 @@ img {
     .text-block h2,
     .text-block p {
       margin-bottom: 50px; } }
+.text-block a {
+  font-weight: 500; }
 
 .about-img {
   grid-area: about-img;
@@ -359,14 +361,16 @@ img {
 .kontakt {
   margin: 0 25px 75px;
   text-align: center; }
+  @media (min-width: 1200px) {
+    .kontakt {
+      margin: 0 230px 300px; } }
   .kontakt h2 {
     margin-bottom: 25px; }
     @media (min-width: 1200px) {
       .kontakt h2 {
         margin-bottom: 50px; } }
-  @media (min-width: 1200px) {
-    .kontakt {
-      margin: 0 230px 300px; } }
+  .kontakt a {
+    font-weight: 500; }
 
 /* Footer Section */
 .main-footer {
@@ -375,6 +379,9 @@ img {
   @media (min-width: 1200px) {
     .main-footer {
       margin: 0 230px 100px; } }
+  .main-footer a {
+    font-style: normal;
+    letter-spacing: 0.02em; }
 
 /* Additional Components */
 
