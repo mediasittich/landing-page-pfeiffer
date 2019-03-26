@@ -244,6 +244,9 @@ img {
     margin-bottom: 150px;
     grid-column: 6 / span 1; } }
 
+.produkte-slider {
+  margin: 0 auto; }
+
 @media (min-width: 1200px) {
   .produkte-slider:nth-of-type(1),
   .produkte-slider:nth-of-type(2) {
