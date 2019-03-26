@@ -1,5 +1,11 @@
 /* Global Styles */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     // @include fluid-type(font-size, $min-font-size, $body-font-size);
 }
