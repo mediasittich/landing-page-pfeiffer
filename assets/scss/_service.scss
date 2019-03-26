@@ -42,6 +42,9 @@
     @include lg-desktop-up {
         justify-self: start;
     }
+    .flip-card {
+        color: $dark-green;
+    }
 
     .flip-card__front,
     .flip-card__back {
@@ -56,7 +59,10 @@
     @include lg-desktop-up {
         justify-self: center;
     }
-    color: $medium-green;
+    .flip-card {
+        color: $medium-green;
+    }
+    
 
     .flip-card__front,
     .flip-card__back {
@@ -71,7 +77,9 @@
     @include lg-desktop-up {
         justify-self: end;
     }
-    color: $light-green;
+    .flip-card {
+        color: $light-green;
+    }
 
     .flip-card__front,
     .flip-card__back {
@@ -80,6 +88,7 @@
 }
 
 .flip-card {
+    display: block;
     width: 270px;
     height: 270px;
 
@@ -96,6 +105,12 @@
     text-align: center;
     transition: transform .8s;
     transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card__inner,
+.flip-card:focus .flip-card__inner,
+.flip-card:active .flip-card__inner {
+    transform: rotateY(180deg);
 }
 
 .flip-card__front,
@@ -126,5 +141,10 @@
 }
 
 .flip-card__back {
-    display: none;
+    background-color: $white;
+    transform: rotateY(180deg);
+
+    p {
+        padding: 0 2rem;
+    }
 }
