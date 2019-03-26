@@ -36,6 +36,7 @@
 
 .box-1 {
     grid-area: box-1;
+    justify-self: center;
 
     @include lg-desktop-up {
         justify-self: start;
@@ -49,7 +50,8 @@
 
 .box-2 {
     grid-area: box-2;
-    
+    justify-self: center;
+
     @include lg-desktop-up {
         justify-self: center;
     }
@@ -63,6 +65,7 @@
 
 .box-3 {
     grid-area: box-3;
+    justify-self: center;
 
     @include lg-desktop-up {
         justify-self: end;
