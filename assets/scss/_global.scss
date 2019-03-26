@@ -1,0 +1,41 @@
+/* Global Styles */
+
+html {
+    // @include fluid-type(font-size, $min-font-size, $body-font-size);
+}
+
+body {
+    font-family: $body-font;
+    color: $font-color;
+    letter-spacing: .02em;
+    font-size: 9px;
+    line-height: 16px;
+
+    @include lg-desktop-up {
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: 20px;
+    line-height: 25px;
+
+    @include lg-desktop-up {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+a {
+    color: $font-color;
+    text-decoration: none;
+    font-style: italic;
+    letter-spacing: .16em;
+}
+
+img {
+    width: 100%;
+}

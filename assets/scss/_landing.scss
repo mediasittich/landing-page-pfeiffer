@@ -1,42 +1,55 @@
-/* Intro Section */
+/* Landing Section */
 
 .landing {
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
     background-color: $light-green;
+    background-image: url('../img/Startbild_1920x1080.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    color: $white;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    @include tablet-portrait-up {
-        background-image: url('../img/Startbild_1920x1080.jpg');
-    }
+.landing-title {
+    font-size: 27px;
+    line-height: calc((35/27) * 1em);
 
     @include lg-desktop-up {
-        padding: 0 9.2rem;
+        font-size: 70px;
     }
 }
 
-.landing-inner {
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.landing-subtitle {
+    font-style: italic;
+    letter-spacing: .16em;
+    font-size: 5px;
 
-    .landing-title {
-        // TODO: font-size responsive, line breaks on  screen < 600px
-        font-size: 2.8rem; // 70px @1920px
-        letter-spacing: .22em;
+    @include lg-desktop-up {
+        font-size: 25px;
+    }
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    height: 25px;
+    width: 27px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -25px);
+
+    @include lg-desktop-up {
+        height: 50px;
+        width: 54px;
+        transform: translate(-50%, -50px);
     }
 
-    .landing-subtitle {
-        font-weight: $heading-font-weight;
-        letter-spacing: .16em;
-        font-style: italic;
-    }
+    .icon-down {}
 }

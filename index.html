@@ -1,225 +1,40 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pfeiffer & Partner</title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <section class="landing" id="landing">
-        <div class="landing-inner">
+    <header id="landing" class="landing">
+        <div class="landing-text">
             <h1 class="landing-title">Pfeiffer &amp; Partner</h1>
             <p class="landing-subtitle">vom Entwurf bis zur Kleinserie</p>
         </div>
-    </section>
-    <main>
-        <section class="container intro" id="intro">
-            <div class="item intro-text">
-                <h2>Pfeiffer &amp; Partner</h2>
-                <p>
-                    Pfeiffer &amp; Partner vereint zwei Leidenschaften in einem. Zum einen ist da die Liebe zum Entwerfen und Entwickeln eigener Möbelstücke und Produkte. Zum anderen herrscht die Passion für die Serviceleistung an Dritte - welche von der Entwurfsunterstützung, über den Bau von Prototypen bis hin zur Fertigung von Kleinserien alle Schritte eines Designprozesses inkludieren.
-                    <br>
-                    Eine Synergie welche die stetige Verbesserung der Produkte als auch die des Service erzielt und somit am Ende stets der Kunde profitiert.
-                </p>
-            </div>
-            <div class="item intro-icon">
-                <img src="./assets/icons/Icon.svg" alt="">
-            </div>
-        </section>
-
-        <section class="container service" id="service">
-            <h2 class="item service-title">Service</h2>
-            
-            <div class="item service-box box-1">
-                <div class="flip-card">
-                    <div class="flip-card__inner">
-                        <div class="flip-card__front">
-                            <h3>Entwurf</h3>
-                        </div>
-                        <div class="flip-card__back">
-                            <p>
-                                Entwurf, Entwicklung und Visualisierung von Produkten mittels 3d-CAD-Software
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item service-box box-2">
-                <div class="flip-card">
-                    <div class="flip-card__inner">
-                        <div class="flip-card__front">
-                            <h3>Prototypenbau</h3>
-                        </div>
-                        <div class="flip-card__back">
-                            <p>
-                                Erstellung von 3d Modellen, virtuell oder als Prototyp schon mit Focus auf Kleinserienproduktion
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item service-box box-3">
-                <div class="flip-card">
-                    <div class="flip-card__inner">
-                        <div class="flip-card__front">
-                            <h3>Kleinserien-Fertigung</h3>
-                        </div>
-                        <div class="flip-card__back">
-                            <p>
-                                Kleinserienproduktion automatisiert mittels 5-Achs-CNC-Fräsen und Bestückungsautomaten
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container produkte" id="produkte">
-            <h2 class="item produkte-title">Produkte</h2>
-            <p class="item produkte-text">
-                Der Weg ist das Ziel Lorem Ipsum Cepudandus dolor mi, soluptum in et lant,
-                nectotas et alit, volo tem inctio. Nam quidercitae nobis di- pieniae cus
-                ipsa sunt eaquam, lant, nectotas et alit, volo tem inctio. Nam
-                quidercitae nobis.
+        
+        <button class="icon-btn">
+            <!-- <img class="icon-down" src="./assets/icons/Pfeil_unten_weiss.svg" alt=""> -->
+        </button>
+    </header>
+    
+    <section class="intro" id="intro">
+        <div class="intro-text">
+            <h2>Pfeiffer &amp; Partner</h2>
+            <p>
+                Pfeiffer &amp; Partner vereint zwei Leidenschaften in einem. Zum einen ist da die Liebe zum Entwerfen und Entwickeln eigener Möbelstücke und Produkte. Zum anderen herrscht die Passion für die Serviceleistung an Dritte - welche von der Entwurfsunterstützung, über den Bau von Prototypen bis hin zur Fertigung von Kleinserien alle Schritte eines Designprozesses inkludieren.
+                <br>
+                Eine Synergie welche die stetige Verbesserung der Produkte als auch die des Service erzielt und somit am Ende stets der Kunde profitiert.
             </p>
-            
-            <div class="item produkte-slider-1">
-
-                <div class="slider-container vertical">
-                    <div class="slider-1 vertical">
-                        <img onclick="openLightbox(this); currentSlide(1)" data-slider-id="1" data-slide-number="1" src="./assets/img/Stuhl_seitlich.jpg" alt="">
-                    </div>
-                    <div class="slider-1 vertical">
-                        <img onclick="openLightbox(this); currentSlide(2)" data-slider-id="1" data-slide-number="2" src="./assets/img/Stuhl_Front.jpg" alt="">
-                    </div>
-
-                    <a class='prev' onclick="nextSlide(-1, 0)">
-                        <img src="./assets/icons/Pfeil_links.svg" alt="">
-                    </a>
-                    <a class='next' onclick="nextSlide(1, 0)">
-                        <img src="./assets/icons/Pfeil_rechts.svg" alt="">
-                    </a>
-                </div>
-                
-            </div>
-            <div class="item produkte-slider-2">
-                <div class="slider-container horizontal">
-                    <div class="slider-2 horizontal">
-                        <img data-slider-id="2" data-slide-number="1" src="./assets/img/Tisch_Front.jpg" alt="">
-                    </div>
-                    <div class="slider-2 horizontal">
-                        <img data-slider-id="2" data-slide-number="2" src="./assets/img/Tisch_oben.jpg" alt="">
-                    </div>
-                    <div class="slider-2 horizontal">
-                        <img data-slider-id="2" data-slide-number="3" src="./assets/img/Tisch_unten.jpg" alt="">
-                    </div>
-                    <div class="slider-2 horizontal">
-                        <img data-slider-id="2" data-slide-number="4" src="./assets/img/Tisch_detail_01.jpg" alt="">
-                    </div>
-
-                    <a class='prev' onclick="nextSlide(-1, 1)">
-                        <img src="./assets/icons/Pfeil_links.svg" alt="">
-                    </a>
-                    <a class='next' onclick="nextSlide(1, 1)">
-                        <img src="./assets/icons/Pfeil_rechts.svg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="item produkte-slider-3">
-                <div class="slider-container vertical">
-                    <div class="slider-3 vertical">
-                        <img data-slider-id="3" data-slide-number="1" src="./assets/img/Leuchtenhalter_01.jpg" alt="">
-                    </div>
-                    <div class="slider-3 vertical">
-                        <img data-slider-id="3" data-slide-number="2" src="./assets/img/Leuchtenhalter_01.jpg" alt="">
-                    </div>
-
-                    <a class='prev' onclick="nextSlide(-1, 2)">
-                        <img src="./assets/icons/Pfeil_links.svg" alt="">
-                    </a>
-                    <a class='next' onclick="nextSlide(1, 2)">
-                        <img src="./assets/icons/Pfeil_rechts.svg" alt="">
-                    </a>
-                </div>
-            </div>
-            
-        </section>
-
-        <section class="referenzen" id="referenzen">
-            <div class="referenzen-slider">
-                <div class="slider-container">
-                    <div class="slider-refs">
-                        <h2>Referenzen</h2>
-                    </div>
-                    <div class="slider-refs">
-                        <h2>Referenzen #2</h2>
-                    </div>
-
-                    <a class='prev' onclick="nextSlide(-1, 3)">
-                        <img src="./assets/icons/Pfeil_links.svg" alt="">
-                    </a>
-                    <a class='next' onclick="nextSlide(1, 3)">
-                        <img src="./assets/icons/Pfeil_rechts.svg" alt="">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="container about" id="about">
-            <div class="item about-text">
-                <h2>Wer ist Pfeiffer &amp; Partner</h2>
-                <p>
-                    Et
-                    voluptassi dis aut atem evellan ihillis dolla ve- nim earum rat. Sum
-                    que veliquo dipsapid molore- henis atin ne cus molor mint lam entorep
-                    erehenis mosandem est fuga. Et adicte non rehenis dolupta- tem qui quis.
-                    Sedit aborest de por.
-                </p>
-                <a href="#">&#187; mehr erfahren</a>
-            </div>
-            <div class="item about-img">
-                <img src="./assets/img/parker-whitson-467822-unsplash.jpg" alt="">
-            </div>
-        </section>
-
-        <section class="kontakt" id="kontakt">
-            <h2>Mehr Infos</h2>
-            <a href="#">info@pfeiffer-und-partner.de</a>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <p>
-            <a href="#">Impressum / Datenschutz</a>
-        </p>
-    </footer>
-
-    <!-- Modal for Lightbox -->
-    <div id="lb-modal" class="modal">
-        <span class="close">
-            <img src="./assets/icons/Kreuz_schliessen.svg" alt="">
-        </span>
-        <div class="modal-content">
-            <!-- Images in Lightbox -->
-            <div id="lb-img-container"></div>
-            
-            <!-- Controls for Lightbox -->
-            <a class='prev' onclick="nextSlide(-1, 0)">
-                <img src="./assets/icons/Pfeil_links.svg" alt="">
-            </a>
-            <a class='next' onclick="nextSlide(1, 0)">
-                <img src="./assets/icons/Pfeil_rechts.svg" alt="">
-            </a>
         </div>
-    </div>
-    <!-- / Modal for Lightbox -->
+        <div class="intro-icon">
+            <img src="./assets/icons/Icon.svg" alt="">
+        </div>
+    </section>
 
-    <script src="assets/js/app.js"></script>
+
+    
 </body>
-
 </html>
