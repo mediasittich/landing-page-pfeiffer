@@ -1,0 +1,9 @@
+/* Footer Section */
+.main-footer {
+    margin: 0 25px 50px;
+    text-align: center;
+
+    @include lg-desktop-up {
+        margin: 0 230px 100px;
+    }
+}

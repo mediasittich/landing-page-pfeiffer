@@ -355,6 +355,27 @@ img {
       height: 703px;
       width: 1460px; } }
 
+/* Kontakt Section */
+.kontakt {
+  margin: 0 25px 75px;
+  text-align: center; }
+  .kontakt h2 {
+    margin-bottom: 25px; }
+    @media (min-width: 1200px) {
+      .kontakt h2 {
+        margin-bottom: 50px; } }
+  @media (min-width: 1200px) {
+    .kontakt {
+      margin: 0 230px 300px; } }
+
+/* Footer Section */
+.main-footer {
+  margin: 0 25px 50px;
+  text-align: center; }
+  @media (min-width: 1200px) {
+    .main-footer {
+      margin: 0 230px 100px; } }
+
 /* Additional Components */
 
 /*# sourceMappingURL=style.css.map */
