@@ -307,6 +307,11 @@ img {
       height: 374px;
       width: 512px; } }
 
+/* For Positioning Control Buttons */
+.produkte-slider,
+.referenzen-slider {
+  position: relative; }
+
 /* Referenzen Section */
 .referenzen {
   margin: 0 25px 75px; }
@@ -402,6 +407,8 @@ img {
 /* Additional Components */
 /* Slide Stack */
 .stack {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -454,5 +461,30 @@ img {
   @media (min-width: 1200px) {
     .stack__slide:nth-of-type(4) {
       transform: translate3d(0, 0, -75px); } }
+
+/* Simple Slider */
+/* Slide Control Buttons*/
+.slide-ctrl {
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 10px;
+  z-index: 20; }
+  .slide-ctrl img {
+    width: 13px; }
+
+.left {
+  left: 20px; }
+
+.right {
+  right: 20px; }
+
+.st2 {
+  fill: none;
+  stroke: #2A5848;
+  stroke-width: 2;
+  stroke-miterlimit: 10; }
 
 /*# sourceMappingURL=style.css.map */
