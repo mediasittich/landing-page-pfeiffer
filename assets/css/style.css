@@ -76,7 +76,7 @@ img {
 
 .icon-btn {
   background-color: transparent;
-  border: 1px solid white;
+  border: 0;
   height: 25px;
   width: 27px;
   position: absolute;
