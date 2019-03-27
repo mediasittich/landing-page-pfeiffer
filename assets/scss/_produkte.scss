@@ -65,6 +65,7 @@
 
 .slider-3 {
     @include lg-desktop-up {
+        // margin-top: 150px;
         grid-column: 2 / span 2;
         grid-row: 6 / span 3;
     }
@@ -79,7 +80,10 @@
     border: $border;
 }
 
-.produkte-slider:nth-of-type(odd) .slider-container {
+
+/* Position Slide Stacks */
+
+.produkte-slider:nth-of-type(odd) .stack {
     height: 369px;
     width: 270px;
 
@@ -88,7 +92,7 @@
         width: 374px;
     }
 }
-.produkte-slider:nth-of-type(even) .slider-container {
+.produkte-slider:nth-of-type(even) .stack {
     height: 197.5px;
     width: 270px;
 
