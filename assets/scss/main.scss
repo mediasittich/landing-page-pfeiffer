@@ -8,8 +8,7 @@
 @import 'landing';
 @import 'intro';
 @import 'service';
-// @import 'produkte';
-@import 'produkte_new';
+@import 'produkte';
 @import 'referenzen';
 @import 'about';
 @import 'kontakt';
@@ -17,4 +16,5 @@
 
 /* Additional Components */
 
-@import 'slidestack';
+@import 'sliderstack';
+@import 'lightbox';

@@ -7,7 +7,7 @@
 }
 
 html {
-    // @include fluid-type(font-size, $min-font-size, $body-font-size);
+    @include fluid-type(font-size, $min-font-size, $body-font-size);
 }
 
 body {
@@ -25,13 +25,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
-    letter-spacing: .22em;
-    font-size: 20px;
-    line-height: 25px;
+    font-weight: $heading-font-weight;
+    letter-spacing: $heading-letter-spacing;
+    font-size: $heading-font-size-sm;
+    line-height: $heading-line-height-sm;
 
-    @include lg-desktop-up {
-        font-size: 40px;
-        line-height: 45px;
+    @include desktop-up {
+        font-size: $heading-font-size-lg;
+        line-height: $heading-line-height-lg;
     }
 }
 

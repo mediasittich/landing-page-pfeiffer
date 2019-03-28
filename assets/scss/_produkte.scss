@@ -1,109 +1,93 @@
-/* Produkte Section */
-
 .produkte {
-    margin: 0 25px 75px;
+    width: calc((1 - (50/320)) * 100%);
+    margin: 0 auto;
+    margin-bottom: calc((75/16) * 1rem);
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 50px;
+
+    @include lg-phone-up {
+        width: 85%;
+    }
+
+    @include tablet-up {
+        width: 70%;
+    }
+
+    @include desktop-up {
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 2.5rem;
+    }
 
     @include lg-desktop-up {
-        margin: 0 230px 300px;
-        grid-gap: 0;
-        grid-template-columns: repeat(3, auto) 25px 25px auto;
-        grid-template-rows: repeat(8, auto);
+        max-width: calc((1460/1920) * 100%);
+        margin-bottom: calc((300/20) * 1rem);
     }
 }
 
 .produkte-title {
-    margin-bottom: -25px;
+    margin-bottom: calc((25/16) * 1rem);
     
     @include lg-desktop-up {
-        margin-bottom: 50px;
-        grid-column: 6 / span 1;
-        grid-row: 1 / span 2;
+        margin-bottom: calc((50/20) * 1rem);
     }
 }
+
 .produkte-text {
+    margin-bottom: calc((50/16) * 1rem);
 
-    @include lg-desktop-up {
-        margin-bottom: 150px;
-        grid-column: 6 / span 1;
+    @include desktop-up {
+        margin-bottom: calc((150/20) * 1rem);
     }
 }
 
+// $lg-phone: 576px;
+// $tablet: 768px;
+// $desktop: 992px;
+// $lg-desktop: 1200px;
+
+.produkte-info,
 .produkte-slider {
-    margin: 0 auto;
+    // border: 2px solid limegreen;
+
+    @include desktop-up {
+        width: 100%;
+    }
 }
 
-.produkte-slider:nth-of-type(1),
-.produkte-slider:nth-of-type(2) {
-
-    @include lg-desktop-up {
-        margin-bottom: 0;
-    }    
+.produkte-info {
+    @include desktop-up {
+        order: 1;
+        grid-row: 1 / 6;
+    }
 }
+
+// .produkte-slider {border: 1px solid lightcoral;}
 
 .slider-1 {
+    margin-bottom: 3.125rem;
+    @include desktop-up {
+        margin-top: $heading-line-height-lg;
+        order: 0;
+        grid-row: 1 / 12;
+        margin-bottom: 7.5rem;
+    }
     @include lg-desktop-up {
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 4;
+        margin-bottom: 7.5rem;
     }
 }
-
 .slider-2 {
-    @include lg-desktop-up {
-        grid-column: 5 / span 2;
-        grid-row: 4 / span 3;
-    }
-
-    .slider-container {
-        @include lg-desktop-up {
-            margin-bottom: 150px;
-        }
+    margin-bottom: 3.125rem;
+    @include desktop-up {
+        order: 2;
+        grid-row: 6 / 15;
     }
 }
-
 .slider-3 {
-    @include lg-desktop-up {
-        // margin-top: 150px;
-        grid-column: 2 / span 2;
-        grid-row: 6 / span 3;
+    @include desktop-up {
+        order: 3;
+        grid-row: 12 / 19;
     }
 }
 
-
-
-
-/* Helpers */
-.slider-container {
-    background-color: lightseagreen;
-    border: $border;
-}
-
-
-/* Position Slide Stacks */
-
-.produkte-slider:nth-of-type(odd) .stack {
-    height: 369px;
-    width: 270px;
-
-    @include lg-desktop-up {
-        height: 512px;
-        width: 374px;
-    }
-}
-.produkte-slider:nth-of-type(even) .stack {
-    height: 197.5px;
-    width: 270px;
-
-    @include lg-desktop-up {
-        height: 374px;
-        width: 512px;
-    }
-}
-
-/* For Positioning Control Buttons */
-.produkte-slider,
-.referenzen-slider {
-    position: relative;
-}

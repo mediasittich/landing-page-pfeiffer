@@ -15,11 +15,12 @@ $body-font: 'Roboto', sans-serif;
 $base-font-size: 16px;
 $min-font-size: 9px; // 9px
 $body-font-weight: 400;
+$body-letter-spacing-sm: .02em;
 
 // Mobile
 $body-font-size-sm: 9px;
 $body-line-height-sm: 16px; // 16px
-$body-letter-spacing-sm: .02em;
+
 // Desktop
 $body-font-size: 20px;
 $body-line-height: 35px; // 16px
@@ -29,8 +30,8 @@ $body-letter-spacing: .02em;
 $heading-font-size-sm: 20px;
 $heading-line-height-sm: 25px;
 // Desktop
-$heading-font-size: 40px;
-$heading-line-height: 45px;
+$heading-font-size-lg: 2rem; //40px
+$heading-line-height-lg: 2.25rem; //45px
 
 $heading-font-weight: 500;
 $heading-letter-spacing: .22em;
