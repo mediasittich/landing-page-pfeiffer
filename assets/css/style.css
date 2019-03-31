@@ -188,16 +188,16 @@ img {
   font-size: 2.05rem;
   font-weight: 400;
   line-height: calc((35/27) * 0.95em); }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     .landing-title {
       font-size: 3.5rem;
-      font-weight: 400; } }
+      font-weight: 500; } }
 
 .landing-subtitle {
   font-style: italic;
   letter-spacing: .16em;
   font-size: 0.75rem; }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     .landing-subtitle {
       font-size: 1.25rem; } }
 
@@ -217,24 +217,24 @@ img {
 
 /* Intro Section */
 .intro {
+  margin-top: calc( 60px + 240 * ((100vw - 576px) / 624) );
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "intro-text" "intro-icon"; }
+  @media (max-width: 576px) {
+    .intro {
+      margin-top: 60px; } }
   @media (min-width: 1200px) {
+    .intro {
+      margin-top: 300px; } }
+  @media (min-width: 992px) {
     .intro {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem;
       grid-template-areas: "intro-icon intro-text"; } }
 
 .intro-text {
-  margin-top: calc( 60px + 240 * ((100vw - 576px) / 624) );
   grid-area: intro-text; }
-  @media (max-width: 576px) {
-    .intro-text {
-      margin-top: 60px; } }
-  @media (min-width: 1200px) {
-    .intro-text {
-      margin-top: 300px; } }
 
 .intro-icon {
   grid-area: intro-icon;
@@ -243,7 +243,7 @@ img {
   padding-top: 1rem; }
   .intro-icon img {
     width: calc((260 / 270) * 100%); }
-    @media (min-width: 1200px) {
+    @media (min-width: 992px) {
       .intro-icon img {
         width: 100%;
         height: auto; } }

@@ -25,9 +25,9 @@
     font-weight: $font-normal;
     line-height: calc((35/27) * 0.95em);
 
-    @include lg-desktop-up {
+    @include desktop-up {
         font-size: 3.5rem;
-        font-weight: $font-normal;
+        font-weight: $font-bold;
     }
 }
 
@@ -36,7 +36,7 @@
     letter-spacing: .16em;
     font-size: 0.75rem; // 5px? -> 12px
 
-    @include lg-desktop-up {
+    @include desktop-up {
         font-size: 1.25rem; // 25px
     }
 }

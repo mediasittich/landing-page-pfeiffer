@@ -1,13 +1,14 @@
 /* Intro Section */
 
 .intro {
+    @include fluid-type(margin-top, 60px, 300px);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
         "intro-text"
         "intro-icon";
 
-    @include lg-desktop-up {
+    @include desktop-up {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 2rem;
         grid-template-areas:
@@ -16,7 +17,6 @@
 }
 
 .intro-text {
-    @include fluid-type(margin-top, 60px, 300px);
     grid-area: intro-text;
 }
 
@@ -29,7 +29,7 @@
     img {
         width: calc((260 / 270) * 100%);
 
-        @include lg-desktop-up {
+        @include desktop-up {
             width: 100%;
             height: auto;
         }
