@@ -7,6 +7,8 @@
     <title>Pfeiffer & Partner</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <script src="./assets/js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 <body>
     <!-- Landing Page fullscreen -->
@@ -103,63 +105,60 @@
         </div>
 
         <div class="produkte-slider slider-1">
-            <ul id="stack--1" class="stack stack--1">
-                <li class="stack__slide">
-                    <img src="./assets/img/Stuhl_seitlich.jpg" alt="" data-stack="1" data-slide="1">
-                </li>
-                <li class="stack__slide">
-                    <img src="./assets/img/Stuhl_Front.jpg" alt="" data-stack="1" data-slide="2">
-                </li>
-            </ul>
+
+            <ul class="cd-item-wrapper">
+                <li class="cd-item-front"><a href="#0"><img src="./assets/img/Stuhl_seitlich.jpg" alt="Preview image"></a></li>
+                <li class="cd-item-middle"><a href="#0"><img src="./assets/img/Stuhl_Front.jpg" alt="Preview image"></a></li>
+                <!-- <li class="cd-item-out">...</li> -->
+            </ul> <!-- cd-item-wrapper -->
 
             <nav>
-                <ul class="stack__ctrl">
-                    <li><a class="slide-ctrl-btn btn-left" data-stack="1" data-direction="previous"></a></li>
-                    <li><a class="slide-ctrl-btn btn-right" data-stack="1" data-direction="next"></a></li>
+                <ul class="cd-item-navigation">
+                    <li><a class="cd-img-replace" href="#0">Prev</a></li>
+                    <li><a class="cd-img-replace" href="#0">Next</a></li>
                 </ul>
             </nav>
+
+            <a class="cd-3d-trigger cd-img-replace" href="#0">Open</a>
         </div>
     
         <div class="produkte-slider slider-2">
-            <ul id="stack--2" class="stack stack--2">
-                <li class="stack__slide">
-                    <img src="./assets/img/Tisch_Front.jpg" alt="" data-stack="2" data-slide="1">
-                </li>
-                <li class="stack__slide">
-                    <img src="./assets/img/Tisch_oben.jpg" alt="" data-stack="2" data-slide="2">
-                </li>
-                <li class="stack__slide">
-                    <img src="./assets/img/Tisch_detail_01.jpg" alt="" data-stack="2" data-slide="3">
-                </li>
-                <li class="stack__slide">
-                    <img src="./assets/img/Tisch_unten.jpg" alt="" data-stack="2" data-slide="4">
-                </li>
-            </ul>
 
+            <ul class="cd-item-wrapper"> <!-- <ul id="stack--2" class="stack stack--2"> -->
+                <!-- <li class="stack__slide"> -->
+                <li class="cd-item-front"><a href="#0"><img src="./assets/img/Tisch_Front.jpg" alt="Preview image"></a></li>
+                <li class="cd-item-middle"><a href="#0"><img src="./assets/img/Tisch_oben.jpg" alt="Preview image"></a></li>
+                <li class="cd-item-back"><a href="#0"><img src="./assets/img/Tisch_detail_01.jpg" alt="Preview image"></a></li>
+                <li class="cd-item-out"><a href="#0"><img src="./assets/img/Tisch_unten.jpg" alt="Preview image"></a></li>
+            </ul> <!-- cd-item-wrapper -->
+    
             <nav>
-                <ul class="stack__ctrl">
-                    <li><a class="slide-ctrl-btn btn-left" data-stack="2" data-direction="previous"></a></li>
-                    <li><a class="slide-ctrl-btn btn-right" data-stack="2" data-direction="next"></a></li>
+                <!-- <ul class="stack__ctrl"> -->
+                <ul class="cd-item-navigation">
+                    <!-- <li><a class="slide-ctrl-btn btn-left" data-stack="2" data-direction="previous"></a></li> -->
+                    <li><a class="cd-img-replace" href="#0">Prev</a></li>
+                    <li><a class="cd-img-replace" href="#0">Next</a></li>
                 </ul>
             </nav>
+
+            <a class="cd-3d-trigger cd-img-replace" href="#0">Open</a>
         </div>
     
         <div class="produkte-slider slider-3">
-            <ul id="stack--3" class="stack stack--3">
-                <li class="stack__slide">
-                    <img src="./assets/img/Leuchtenhalter_01.jpg" alt="" data-stack="3" data-slide="1">
-                </li>
-                <li class="stack__slide">
-                    <img src="./assets/img/Leuchtenhalter_02.jpg" alt="" data-stack="3" data-slide="2">
-                </li>
-            </ul>
+
+            <ul class="cd-item-wrapper">
+                <li class="cd-item-front"><a href="#0"><img src="./assets/img/Leuchtenhalter_01.jpg" alt="Preview image"></a></li>
+                <li class="cd-item-middle"><a href="#0"><img src="./assets/img/Leuchtenhalter_02.jpg" alt="Preview image"></a></li>
+            </ul> <!-- cd-item-wrapper -->
 
             <nav>
-                <ul class="stack__ctrl">
-                    <li><a class="slide-ctrl-btn btn-left" data-stack="3" data-direction="previous"></a></li>
-                    <li><a class="slide-ctrl-btn btn-right" data-stack="3" data-direction="next"></a></li>
+                <ul class="cd-item-navigation">
+                    <li><a class="cd-img-replace" href="#0">Prev</a></li>
+                    <li><a class="cd-img-replace" href="#0">Next</a></li>
                 </ul>
             </nav>
+
+            <a class="cd-3d-trigger cd-img-replace" href="#0">Open</a>
         </div>
     
         </section>
@@ -221,6 +220,7 @@
     </div> -->
     <!-- / Modal -->
 
+    <script src="./assets/js/jquery-2.1.1.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

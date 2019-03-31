@@ -1,90 +1,89 @@
-(function(window) {
+jQuery(document).ready(function($){
+	var visionTrigger = $('.cd-3d-trigger'),
+		galleryItems = $('.no-touch .produkte-slider'),
+		galleryNavigation = $('.cd-item-navigation a');
 
-    const allSlides = document.querySelectorAll('.stack__slide');
-    const sliderCtrlBtns = document.querySelectorAll('.slide-ctrl-btn');
-    const modal = document.getElementById('modal')
+	//on mobile - start/end 3d vision clicking on the 3d-vision-trigger
+	visionTrigger.on('click', function(){
+		$this = $(this);
+		if( $this.parent('div').hasClass('active') ) {
+			$this.parent('div').removeClass('active');
+			hideNavigation($this.parent('div').find('.cd-item-navigation'));
+		} else {
+			$this.parent('div').addClass('active');
+			updateNavigation($this.parent('div').find('.cd-item-navigation'), $this.parent('div').find('.cd-item-wrapper'));
+		}
+	});
 
-    let slideIndex = [0, 0, 0]
+	//on desktop - update navigation visibility when hovering over the gallery images
+	galleryItems.hover(
+		//when mouse enters the element, show slider navigation
+		function(){
+			$this = $(this).children('.cd-item-wrapper');
+			updateNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0), $this);
+		},
+		//when mouse leaves the element, hide slider navigation
+		function(){
+			$this = $(this).children('.cd-item-wrapper');
+			hideNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0));
+		}
+	);
 
-    // Slider Controls
-    sliderCtrlBtns.forEach(btn => btn.addEventListener('click', ctrlClickHandler))
+	//change image in the slider
+	galleryNavigation.on('click', function(){
+		var navigationAnchor = $(this);
+			direction = navigationAnchor.text(),
+			activeContainer = navigationAnchor.parents('nav').eq(0).siblings('.cd-item-wrapper');
+		
+		( direction=="Next") ? showNextSlide(activeContainer) : showPreviousSlide(activeContainer);
+		updateNavigation(navigationAnchor.parents('.cd-item-navigation').eq(0), activeContainer);
+	});
+});
 
-    function ctrlClickHandler(e) {
-        // console.log(e.target.dataset)
+function showNextSlide(container) {
+	var itemToHide = container.find('.cd-item-front'),
+		itemToShow = container.find('.cd-item-middle'),
+		itemMiddle = container.find('.cd-item-back'),
+		itemToBack = container.find('.cd-item-out').eq(0);
 
-        let stackNumber = parseInt(e.target.dataset.stack)
-        let n = 1 // step size
-        
+	itemToHide.addClass('move-right').removeClass('cd-item-front').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+		itemToHide.addClass('hidden');
+	});
+	itemToShow.addClass('cd-item-front').removeClass('cd-item-middle');
+	itemMiddle.addClass('cd-item-middle').removeClass('cd-item-back');
+	itemToBack.addClass('cd-item-back').removeClass('cd-item-out');
+}
 
-        // console.log(slides[slideIndex].children[0])
-        if (e.target.dataset.direction === 'previous') {
-            previousSlide(slideIndex, stackNumber, n)
-        } else {
-            nextSlide(slideIndex, stackNumber, n)
-        }
-    }
+function showPreviousSlide(container) {
+	var itemToMiddle = container.find('.cd-item-front'),
+		itemToBack = container.find('.cd-item-middle'),
+		itemToShow = container.find('.move-right').slice(-1),
+		itemToOut = container.find('.cd-item-back');
 
-    function nextSlide(slideIndex, stackNumber, n){
-        showSlide(slideIndex[stackNumber - 1] += n, stackNumber)
-    }
+	itemToShow.removeClass('hidden').addClass('cd-item-front');
+	itemToMiddle.removeClass('cd-item-front').addClass('cd-item-middle');
+	itemToBack.removeClass('cd-item-middle').addClass('cd-item-back');
+	itemToOut.removeClass('cd-item-back').addClass('cd-item-out');
 
-    function previousSlide(slideIndex, stackNumber, n){
-        showSlide(slideIndex[stackNumber - 1] -= n, stackNumber)
-    }
+	//wait until itemToShow does'n have the 'hidden' class, then remove the move-right class 
+	//in this way, transition works also in the way back
+	var stop = setInterval(checkClass, 100);
+	
+	function checkClass(){
+		if( !itemToShow.hasClass('hidden') ) {
+			itemToShow.removeClass('move-right');
+			window.clearInterval(stop);
+		}
+	}
+}
 
-    function showSlide(index, stackNumber){
-        const slides = document.querySelectorAll(`[data-stack="${stackNumber}"][data-slide]`);
-        
-        
-        if (index > slides.length - 1) {
-            slideIndex[stackNumber - 1] = 0
-        }
-        if (index < 0) {
-            slideIndex[stackNumber - 1] = slides.length - 1
-        }
+function updateNavigation(navigation, container) {
+	var isNextActive = ( container.find('.cd-item-middle').length > 0 ) ? true : false,
+		isPrevActive = 	( container.children('li').eq(0).hasClass('cd-item-front') ) ? false : true;
+	(isNextActive) ? navigation.find('a').eq(1).addClass('visible') : navigation.find('a').eq(1).removeClass('visible');
+	(isPrevActive) ? navigation.find('a').eq(0).addClass('visible') : navigation.find('a').eq(0).removeClass('visible');
+}
 
-        // Display Slide
-        console.log(slides[slideIndex[stackNumber - 1]])
-        
-    }
-
-
-    // Lightbox
-
-    const lbCloseBtn = document.getElementById('close-btn')
-    const lbImgContainer = document.getElementById('lb-img-container')
-
-    allSlides.forEach(slide => slide.addEventListener('click', slideClickHandler))
-
-    function slideClickHandler(e) {
-        
-        let stackNumber = e.target.dataset.stack
-        let slideNumber = e.target.dataset.slide
-
-        console.log('Stack: ', stackNumber, 'Slide: ', slideNumber, 'Target: ', e.target.src)
-        // currentSlide(slideNumber - 1, stackNumber)
-        openLightbox(slideIndex, stackNumber, e.target.src)
-    }
-
-    function currentSlide(slideIndex, stackNumber){
-        // showSlide(slideIndex, stackNumber)
-    }
-
-    function openLightbox(slideIndex, stackNumber, clickedImg) {
-        // console.log(slides[slideIndex[stackNumber - 1]])
-        let lbImg = document.createElement('img')
-        lbImg.src = clickedImg
-        lbImgContainer.appendChild(lbImg)
-        modal.style.display = 'block'
-    }
-
-    lbCloseBtn.addEventListener('click', closeLightbox)
-
-    function closeLightbox() {
-        modal.style.display = 'none'
-        while (lbImgContainer.hasChildNodes()) {
-            lbImgContainer.removeChild(lbImgContainer.firstChild)
-        }
-    }
-
-})(window);
+function hideNavigation(navigation) {
+	navigation.find('a').removeClass('visible');
+}
