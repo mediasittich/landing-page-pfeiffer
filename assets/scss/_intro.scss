@@ -10,7 +10,7 @@
 
     @include desktop-up {
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2rem;
+        grid-column-gap: 2.5rem;
         grid-template-areas:
             "intro-icon intro-text";
     }
@@ -27,13 +27,14 @@
     padding-top: 1rem;
     @include desktop-up {
         padding: 0;
+        transform: translateY(-10%);
     }
 
     img {
         width: calc((260 / 270) * 100%);
 
         @include desktop-up {
-            width: 100%;
+            // width: 100%;
             height: auto;
         }
     }

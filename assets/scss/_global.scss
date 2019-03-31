@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
     @include fluid-type(line-height, $heading-line-height-sm, $heading-line-height-lg);
     
-    @include fluid-type(margin-bottom, 1rem, 2rem); 
+    @include fluid-type(margin-bottom, 1rem, 2.5rem); 
 }
 
 h2 {
