@@ -8,6 +8,7 @@
 }
 
 .services {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
@@ -89,14 +90,20 @@
     width: 100%;
     height: 100%;
     text-align: center;
+    -webkit-transition: -webkit-transform .8s;
+    transition: -webkit-transform .8s;
+    -o-transition: transform .8s;
     transition: transform .8s;
-    transform-style: preserve-3d;
+    transition: transform .8s, -webkit-transform .8s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card__inner,
 .flip-card:focus .flip-card__inner,
 .flip-card:active .flip-card__inner {
     outline: none;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -107,7 +114,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     border-radius: 50%;
     border: $border;
     
@@ -130,6 +138,7 @@
 
 .flip-card__back {
     background-color: $white;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 
     p {
