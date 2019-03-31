@@ -40,7 +40,8 @@ h2 {
     @include fluid-type(font-size, $heading-font-size-sm, $heading-font-size-lg);
 }
 
-p {
+p,
+a {
     font-size: 14px;
     
     @include lg-phone-up {

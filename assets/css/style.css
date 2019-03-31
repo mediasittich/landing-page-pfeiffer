@@ -68,16 +68,20 @@ h2 {
     h2 {
       font-size: 2rem; } }
 
-p {
+p,
+a {
   font-size: 14px; }
   @media (min-width: 576px) {
-    p {
+    p,
+    a {
       font-size: calc( 16px + 4 * ((100vw - 576px) / 624) ); } }
   @media (min-width: 576px) and (max-width: 576px) {
-    p {
+    p,
+    a {
       font-size: 16px; } }
   @media (min-width: 576px) and (min-width: 1200px) {
-    p {
+    p,
+    a {
       font-size: 20px; } }
 
 a {
@@ -247,6 +251,12 @@ img {
       .intro-icon img {
         width: 100%;
         height: auto; } }
+
+/* Kontakt Section */
+.kontakt {
+  text-align: center; }
+  .kontakt a {
+    font-weight: 500; }
 
 /* Footer Section */
 .main-footer {
