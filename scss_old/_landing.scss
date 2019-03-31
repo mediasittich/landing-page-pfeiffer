@@ -17,36 +17,40 @@
 }
 
 .landing-title {
-    font-size: 1.6875rem;
+    font-size: 27px;
     line-height: calc((35/27) * 1em);
 
     @include lg-desktop-up {
-        font-size: 3.5rem;
+        font-size: 70px;
     }
 }
 
 .landing-subtitle {
     font-style: italic;
     letter-spacing: .16em;
-    font-size: 0.875rem; // 5px? -> 14px
+    font-size: 5px;
 
     @include lg-desktop-up {
-        font-size: 1.25rem; // 25px
+        font-size: 25px;
     }
 }
 
 .icon-btn {
     background-color: transparent;
+    // border: 1px solid white;
     border: 0;
-    width: 1.7rem;
+    height: 25px;
+    width: 27px;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, -1rem);
-    padding: 0;
+    transform: translate(-50%, -25px);
 
-    @include desktop-up {
-        width: 2.5rem;
-        transform: translate(-50%, -2rem);
+    @include lg-desktop-up {
+        height: 50px;
+        width: 54px;
+        transform: translate(-50%, -50px);
     }
+
+    .icon-down {}
 }

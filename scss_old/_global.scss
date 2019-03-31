@@ -12,13 +12,13 @@ html {
 
 body {
     font-family: $body-font;
-    font-weight: $font-thin;
     color: $font-color;
     letter-spacing: $body-letter-spacing;
-    @include fluid-type(line-height, $body-line-height-sm, $body-line-height-lg);
+    line-height: $body-line-height-sm;
 
-    @include lg-phone-up {
-        font-weight: $font-normal;
+    @include lg-desktop-up {
+        font-size: $body-font-size-lg;
+        line-height: $body-line-height-lg;
     }
 }
 
@@ -44,18 +44,4 @@ a {
 
 img {
     width: 100%;
-    height: auto;
-}
-
-.intro,
-.service,
-.produkte,
-.referenzen,
-.about,
-.kontakt {
-    margin: 0 25px 75px;
-
-    @include lg-desktop-up {
-        margin: 0 230px 300px;
-    }
 }

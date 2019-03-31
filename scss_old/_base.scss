@@ -1,0 +1,77 @@
+/* Import Google Font */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+/* Variables */
+
+$white: #FFF;
+$white90: rgba(255, 255, 255, .9);
+$dark-green: #2A5848;
+$medium-green: #448B75;
+$light-green: #50A489;
+$font-color: $dark-green;
+
+$body-font: 'Roboto', sans-serif;
+$base-font-size: 16px;
+$min-font-size: 0.5625rem; // 9px
+$body-font-weight: 400;
+$body-letter-spacing: .02em;
+
+// Mobile
+$body-font-size-sm: $min-font-size;
+$body-line-height-sm: $base-font-size; // 16px
+
+// Desktop
+$body-font-size-lg: 20px;
+$body-line-height-lg: 35px; // 16px
+
+// Mobile
+$heading-font-size-sm: 20px;
+$heading-line-height-sm: 25px;
+// Desktop
+$heading-font-size-lg: 2rem; //40px
+$heading-line-height-lg: 2.25rem; //45px
+
+$heading-font-weight: 500;
+$heading-letter-spacing: .22em;
+$heading-transform: uppercase;
+
+$border: 2px solid $dark-green;
+
+/* Media Queries Sizes */
+
+$lg-phone: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$lg-desktop: 1200px;
+
+/* Fluid Typography Mixin*/
+/* https://codepen.io/dbox/pen/meaMba */
+
+@mixin fluid-type($text-attr, $min-font-size, $max-font-size, $lower-range: $lg-phone, $upper-range: $lg-desktop) {
+    #{$text-attr}: calc(
+        #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{ (($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1) )) })
+    );
+
+    @media (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+    @media (min-width: $upper-range) {
+        font-size: $max-font-size;
+    }
+}
+
+/* Media Queries Mixins */
+
+@mixin lg-phone-up {
+    @media (min-width: $lg-phone) { @content; }
+}
+@mixin tablet-up {
+    @media (min-width: $tablet) { @content; }
+}
+@mixin desktop-up {
+    @media (min-width: $desktop) { @content; }
+}
+@mixin lg-desktop-up {
+    @media (min-width: $lg-desktop) { @content; }
+}

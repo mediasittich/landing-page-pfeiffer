@@ -1,6 +1,6 @@
 /* Import Google Font */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 /* Variables */
 
@@ -12,30 +12,25 @@ $light-green: #50A489;
 $font-color: $dark-green;
 
 $body-font: 'Roboto', sans-serif;
-$base-font-size: 16px;
-$min-font-size: 9px; // 9px
-$body-font-weight: 400;
-$body-letter-spacing-sm: .02em;
-
-// Mobile
-$body-font-size-sm: 9px;
-$body-line-height-sm: 16px; // 16px
-
-// Desktop
-$body-font-size: 20px;
-$body-line-height: 35px; // 16px
-$body-letter-spacing: .02em;
-
-// Mobile
-$heading-font-size-sm: 20px;
-$heading-line-height-sm: 25px;
-// Desktop
-$heading-font-size-lg: 2rem; //40px
-$heading-line-height-lg: 2.25rem; //45px
-
+$font-thin: 300;
+$font-normal: 400;
+$font-bold: 500;
 $heading-font-weight: 500;
+$body-letter-spacing: .02em;
 $heading-letter-spacing: .22em;
-$heading-transform: uppercase;
+
+$base-font-size: 16px;
+$lg-font-size: 20px;
+
+$body-font-size-sm: $base-font-size; // 16px
+$body-font-size-lg: $lg-font-size; // 20px
+$body-line-height-sm: 1.5em;
+$body-line-height-lg: 1.4em;
+
+$heading-font-size-sm: 1.25rem; // 20px
+$heading-font-size-lg: 2rem; // 40px
+$heading-line-height-sm: 1.25em; // 25px
+$heading-line-height-lg: 1.125em; // 45px
 
 $border: 2px solid $dark-green;
 
@@ -49,16 +44,16 @@ $lg-desktop: 1200px;
 /* Fluid Typography Mixin*/
 /* https://codepen.io/dbox/pen/meaMba */
 
-@mixin fluid-type($text-attr, $min-font-size, $max-font-size, $lower-range: $lg-phone, $upper-range: $lg-desktop) {
+@mixin fluid-type($text-attr, $min-size, $max-size, $lower-range: $lg-phone, $upper-range: $lg-desktop) {
     #{$text-attr}: calc(
-        #{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{ (($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1) )) })
+        #{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{ (($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1) )) })
     );
 
     @media (max-width: $lower-range) {
-        font-size: $min-font-size;
+        #{$text-attr}: $min-size;
     }
     @media (min-width: $upper-range) {
-        font-size: $max-font-size;
+        #{$text-attr}: $max-size;
     }
 }
 
