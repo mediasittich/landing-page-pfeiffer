@@ -25,6 +25,9 @@
     line-height: 1;
     text-align: center;
     padding-top: 1rem;
+    @include desktop-up {
+        padding: 0;
+    }
 
     img {
         width: calc((260 / 270) * 100%);

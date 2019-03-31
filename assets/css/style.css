@@ -245,12 +245,53 @@ img {
   line-height: 1;
   text-align: center;
   padding-top: 1rem; }
+  @media (min-width: 992px) {
+    .intro-icon {
+      padding: 0; } }
   .intro-icon img {
     width: calc((260 / 270) * 100%); }
     @media (min-width: 992px) {
       .intro-icon img {
         width: 100%;
         height: auto; } }
+
+/* About Section */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3rem;
+  grid-template-areas: "about-text" "about-img"; }
+  @media (min-width: 992px) {
+    .about {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+      grid-template-areas: "about-img about-text"; } }
+
+.about-text {
+  grid-area: about-text; }
+  @media (min-width: 992px) {
+    .about-text {
+      display: flex;
+      align-items: center; } }
+
+.text-block h2,
+.text-block p {
+  margin-bottom: calc( 25px + 25 * ((100vw - 576px) / 624) ); }
+  @media (max-width: 576px) {
+    .text-block h2,
+    .text-block p {
+      margin-bottom: 25px; } }
+  @media (min-width: 1200px) {
+    .text-block h2,
+    .text-block p {
+      margin-bottom: 50px; } }
+.text-block a {
+  font-weight: 500; }
+
+.about-img {
+  grid-area: about-img;
+  width: calc((260 / 270) * 100%);
+  margin: 0 auto; }
 
 /* Kontakt Section */
 .kontakt {
