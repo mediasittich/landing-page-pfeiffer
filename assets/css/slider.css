@@ -18,37 +18,37 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-.produkte-slider {
+.stack-container {
   position: relative;
-  margin-bottom: 6em;
+  /* margin-bottom: 6em; */
 }
-.produkte-slider img {
+.stack-container img {
   width: 100%;
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  .produkte-slider {
-    width: 48%;
+  .stack-container {
+    /* width: 48%;
     float: left;
     margin-right: 4%;
-    margin-bottom: 6.5em;
+    margin-bottom: 6.5em; */
   }
-  .produkte-slider:nth-child(2n) {
-    margin-right: 0;
+  .stack-container:nth-child(2n) {
+    /* margin-right: 0; */
   }
 }
 @media only screen and (min-width: 1170px) {
-  .produkte-slider {
-    width: 31%;
+  .stack-container {
+    /* width: 31%;
     float: left;
     margin-bottom: 7em;
-    margin-right: 3.5%;
+    margin-right: 3.5%; */
   }
-  .produkte-slider:nth-child(2n) {
-    margin-right: 3.5%;
+  .stack-container:nth-child(2n) {
+    /* margin-right: 3.5%; */
   }
-  .produkte-slider:nth-child(3n) {
-    margin-right: 0;
+  .stack-container:nth-child(3n) {
+    /* margin-right: 0; */
   }
 }
 
@@ -151,7 +151,7 @@ Main components
   background-position: center center;
   z-index: 4;
   display: none;
-  border-radius: 0.25em;
+  /* border-radius: 0.25em; */
 }
 .no-touch .cd-item-navigation a:hover {
   background-color: rgba(216, 216, 216, 0.6);
@@ -204,20 +204,8 @@ Main components
     opacity: 1;
   }
 }
-.cd-3d-trigger {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 44px;
-  height: 44px;
-  background: url("../img/cd-icon-3d.svg") no-repeat center center;
-  z-index: 4;
-}
-.no-touch .cd-3d-trigger {
-  display: none;
-}
 
-.no-touch .produkte-slider:hover .cd-item-middle, .no-touch .produkte-slider:hover .cd-item-back {
+.no-touch .stack-container:hover .cd-item-middle, .no-touch .stack-container:hover .cd-item-back {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .no-touch .produkte-slider:hover .cd-item-middle {
@@ -229,7 +217,7 @@ Main components
   transform: translate3d(0, 0, -20px);
   opacity: .8;
 }
-.no-touch .produkte-slider:hover .cd-item-back {
+.no-touch .stack-container:hover .cd-item-back {
   /* 3D effect on no-touch devices */
   -webkit-transform: translate3d(0, 0, -40px);
   -moz-transform: translate3d(0, 0, -40px);

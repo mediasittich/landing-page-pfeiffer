@@ -1,33 +1,6 @@
 jQuery(document).ready(function($){
-	var visionTrigger = $('.cd-3d-trigger'),
-		galleryItems = $('.no-touch .produkte-slider'),
+	var galleryItems = $('.no-touch .stack-container'),
 		galleryNavigation = $('.cd-item-navigation a');
-
-	//on mobile - start/end 3d vision clicking on the 3d-vision-trigger
-	visionTrigger.on('click', function(){
-		$this = $(this);
-		if( $this.parent('div').hasClass('active') ) {
-			$this.parent('div').removeClass('active');
-			// hideNavigation($this.parent('div').find('.cd-item-navigation'));
-		} else {
-			$this.parent('div').addClass('active');
-			updateNavigation($this.parent('div').find('.cd-item-navigation'), $this.parent('div').find('.cd-item-wrapper'));
-		}
-	});
-
-	//on desktop - update navigation visibility when hovering over the gallery images
-	galleryItems.hover(
-		//when mouse enters the element, show slider navigation
-		function(){
-			$this = $(this).children('.cd-item-wrapper');
-			updateNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0), $this);
-		},
-		//when mouse leaves the element, hide slider navigation
-		function(){
-			$this = $(this).children('.cd-item-wrapper');
-			// hideNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0));
-		}
-	);
 
 	//change image in the slider
 	galleryNavigation.on('click', function(){
@@ -83,7 +56,3 @@ function updateNavigation(navigation, container) {
 	(isNextActive) ? navigation.find('a').eq(1).addClass('visible') : navigation.find('a').eq(1).removeClass('visible');
 	(isPrevActive) ? navigation.find('a').eq(0).addClass('visible') : navigation.find('a').eq(0).removeClass('visible');
 }
-
-// function hideNavigation(navigation) {
-// 	navigation.find('a').removeClass('visible');
-// }
