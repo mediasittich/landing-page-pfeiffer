@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 2rem;
       line-height: 1.125em; } }
 
+p {
+  font-size: 14px; }
+
 a {
   color: #2A5848;
   text-decoration: none;
@@ -63,16 +66,74 @@ img {
 .produkte,
 .referenzen,
 .about,
-.kontakt {
-  margin: 0 25px 75px; }
+.kontakt,
+.main-footer {
+  width: calc((1 - (50/320)) * 100%);
+  margin: 0 auto;
+  margin-bottom: calc( 75px + 225 * ((100vw - 576px) / 624) ); }
+  @media (max-width: 576px) {
+    .intro,
+    .service,
+    .produkte,
+    .referenzen,
+    .about,
+    .kontakt,
+    .main-footer {
+      margin-bottom: 75px; } }
   @media (min-width: 1200px) {
     .intro,
     .service,
     .produkte,
     .referenzen,
     .about,
-    .kontakt {
-      margin: 0 230px 300px; } }
+    .kontakt,
+    .main-footer {
+      margin-bottom: 300px; } }
+  @media (min-width: 576px) {
+    .intro,
+    .service,
+    .produkte,
+    .referenzen,
+    .about,
+    .kontakt,
+    .main-footer {
+      width: 85%; } }
+  @media (min-width: 768px) {
+    .intro,
+    .service,
+    .produkte,
+    .referenzen,
+    .about,
+    .kontakt,
+    .main-footer {
+      width: 70%; } }
+  @media (min-width: 992px) {
+    .intro,
+    .service,
+    .produkte,
+    .referenzen,
+    .about,
+    .kontakt,
+    .main-footer {
+      width: 85%; } }
+  @media (min-width: 1200px) {
+    .intro,
+    .service,
+    .produkte,
+    .referenzen,
+    .about,
+    .kontakt,
+    .main-footer {
+      max-width: calc((1460/1920) * 100%); } }
+
+.main-footer {
+  margin-bottom: calc( 50px + 50 * ((100vw - 576px) / 624) ); }
+  @media (max-width: 576px) {
+    .main-footer {
+      margin-bottom: 50px; } }
+  @media (min-width: 1200px) {
+    .main-footer {
+      margin-bottom: 100px; } }
 
 /* Components */
 /* Landing Section */
@@ -91,17 +152,22 @@ img {
   justify-content: center;
   align-items: center; }
 
+.landing-text {
+  transform: translateY(-16%); }
+
 .landing-title {
-  font-size: 1.6875rem;
-  line-height: calc((35/27) * 1em); }
+  font-size: 2.05rem;
+  font-weight: 400;
+  line-height: calc((35/27) * 0.95em); }
   @media (min-width: 1200px) {
     .landing-title {
-      font-size: 3.5rem; } }
+      font-size: 3.5rem;
+      font-weight: 400; } }
 
 .landing-subtitle {
   font-style: italic;
   letter-spacing: .16em;
-  font-size: 0.875rem; }
+  font-size: 0.75rem; }
   @media (min-width: 1200px) {
     .landing-subtitle {
       font-size: 1.25rem; } }
@@ -119,6 +185,13 @@ img {
     .icon-btn {
       width: 2.5rem;
       transform: translate(-50%, -2rem); } }
+
+/* Footer Section */
+.main-footer {
+  text-align: center; }
+  .main-footer a {
+    font-style: normal;
+    letter-spacing: 0.02em; }
 
 /* Additional Components */
 

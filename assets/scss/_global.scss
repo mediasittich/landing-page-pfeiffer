@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+p {
+    font-size: 14px;
+}
+
 a {
     color: $font-color;
     text-decoration: none;
@@ -52,10 +56,30 @@ img {
 .produkte,
 .referenzen,
 .about,
-.kontakt {
-    margin: 0 25px 75px;
+.kontakt,
+.main-footer {
+
+    width: calc((1 - (50/320)) * 100%); // 270px
+    margin: 0 auto;
+    @include fluid-type(margin-bottom, 75px, 300px);
+
+    @include lg-phone-up {
+        width: 85%;
+    }
+
+    @include tablet-up {
+        width: 70%;
+    }
+
+    @include desktop-up {
+        width: 85%;
+    }
 
     @include lg-desktop-up {
-        margin: 0 230px 300px;
+        max-width: calc((1460/1920) * 100%); // 1460px
     }
+}
+
+.main-footer {
+    @include fluid-type(margin-bottom, 50px, 100px);
 }

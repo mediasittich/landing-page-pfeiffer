@@ -16,19 +16,25 @@
     align-items: center;
 }
 
+.landing-text {
+    transform: translateY(-16%);
+}
+
 .landing-title {
-    font-size: 1.6875rem;
-    line-height: calc((35/27) * 1em);
+    font-size: 2.05rem; // 1.6875rem;
+    font-weight: $font-normal;
+    line-height: calc((35/27) * 0.95em);
 
     @include lg-desktop-up {
         font-size: 3.5rem;
+        font-weight: $font-normal;
     }
 }
 
 .landing-subtitle {
     font-style: italic;
     letter-spacing: .16em;
-    font-size: 0.875rem; // 5px? -> 14px
+    font-size: 0.75rem; // 5px? -> 12px
 
     @include lg-desktop-up {
         font-size: 1.25rem; // 25px
