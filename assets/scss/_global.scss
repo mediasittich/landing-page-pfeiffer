@@ -24,19 +24,28 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
-    font-weight: $heading-font-weight;
+    font-weight: $font-normal;
     letter-spacing: $heading-letter-spacing;
-    font-size: $heading-font-size-sm;
-    line-height: $heading-line-height-sm;
 
-    @include desktop-up {
-        font-size: $heading-font-size-lg;
-        line-height: $heading-line-height-lg;
+    @include lg-phone-up {
+        font-weight: $font-bold;
     }
+
+    @include fluid-type(line-height, $heading-line-height-sm, $heading-line-height-lg);
+    
+    @include fluid-type(margin-bottom, 1rem, 2rem); 
+}
+
+h2 {
+    @include fluid-type(font-size, $heading-font-size-sm, $heading-font-size-lg);
 }
 
 p {
     font-size: 14px;
+    
+    @include lg-phone-up {
+        @include fluid-type(font-size, $body-font-size-sm, $body-font-size-lg);
+    }
 }
 
 a {
@@ -61,7 +70,7 @@ img {
 
     width: calc((1 - (50/320)) * 100%); // 270px
     margin: 0 auto;
-    @include fluid-type(margin-bottom, 75px, 300px);
+    @include fluid-type(margin-bottom, 60px, 300px);
 
     @include lg-phone-up {
         width: 85%;
