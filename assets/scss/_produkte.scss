@@ -1,0 +1,93 @@
+.produkte {
+    width: calc((1 - (50/320)) * 100%);
+    margin: 0 auto;
+    margin-bottom: calc((75/16) * 1rem);
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include lg-phone-up {
+        width: 85%;
+    }
+
+    @include tablet-up {
+        width: 70%;
+    }
+
+    @include desktop-up {
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 2.5rem;
+    }
+
+    @include lg-desktop-up {
+        max-width: calc((1460/1920) * 100%);
+        margin-bottom: calc((300/20) * 1rem);
+    }
+}
+
+.produkte-title {
+    margin-bottom: calc((25/16) * 1rem);
+    
+    @include lg-desktop-up {
+        margin-bottom: calc((50/20) * 1rem);
+    }
+}
+
+.produkte-text {
+    margin-bottom: calc((50/16) * 1rem);
+
+    @include desktop-up {
+        margin-bottom: calc((150/20) * 1rem);
+    }
+}
+
+// $lg-phone: 576px;
+// $tablet: 768px;
+// $desktop: 992px;
+// $lg-desktop: 1200px;
+
+.produkte-info,
+.produkte-slider {
+    // border: 2px solid limegreen;
+
+    @include desktop-up {
+        width: 100%;
+    }
+}
+
+.produkte-info {
+    @include desktop-up {
+        order: 1;
+        grid-row: 1 / 6;
+    }
+}
+
+// .produkte-slider {border: 1px solid lightcoral;}
+
+.slider-1 {
+    margin-bottom: 3.125rem;
+    @include desktop-up {
+        margin-top: $heading-line-height-lg;
+        order: 0;
+        grid-row: 1 / 12;
+        margin-bottom: 7.5rem;
+    }
+    @include lg-desktop-up {
+        margin-bottom: 7.5rem;
+    }
+}
+.slider-2 {
+    margin-bottom: 3.125rem;
+    @include desktop-up {
+        order: 2;
+        grid-row: 6 / 15;
+    }
+}
+.slider-3 {
+    @include desktop-up {
+        order: 3;
+        grid-row: 12 / 19;
+    }
+}
+
