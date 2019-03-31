@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 		$this = $(this);
 		if( $this.parent('div').hasClass('active') ) {
 			$this.parent('div').removeClass('active');
-			hideNavigation($this.parent('div').find('.cd-item-navigation'));
+			// hideNavigation($this.parent('div').find('.cd-item-navigation'));
 		} else {
 			$this.parent('div').addClass('active');
 			updateNavigation($this.parent('div').find('.cd-item-navigation'), $this.parent('div').find('.cd-item-wrapper'));
@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
 		//when mouse leaves the element, hide slider navigation
 		function(){
 			$this = $(this).children('.cd-item-wrapper');
-			hideNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0));
+			// hideNavigation($this.siblings('nav').find('.cd-item-navigation').eq(0));
 		}
 	);
 
@@ -84,6 +84,6 @@ function updateNavigation(navigation, container) {
 	(isPrevActive) ? navigation.find('a').eq(0).addClass('visible') : navigation.find('a').eq(0).removeClass('visible');
 }
 
-function hideNavigation(navigation) {
-	navigation.find('a').removeClass('visible');
-}
+// function hideNavigation(navigation) {
+// 	navigation.find('a').removeClass('visible');
+// }
