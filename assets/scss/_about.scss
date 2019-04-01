@@ -1,5 +1,9 @@
 /* About Section */
 
+/* **************
+*   TODO
+*   Convert to float for long text
+* ***************/
 .about {
     display: grid;
     grid-template-columns: 1fr;   
@@ -38,4 +42,20 @@
     grid-area: about-img;
     width: calc((260 / 270) * 100%);
     margin: 0 auto;
+}
+
+.read-more-toggle {
+    font-family: $body-font;
+    font-size: inherit;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: .16em;
+    color: inherit;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.read-more-target {
+    display: none;
 }
