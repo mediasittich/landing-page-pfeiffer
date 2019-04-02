@@ -100,7 +100,8 @@ img {
 .referenzen,
 .about,
 .kontakt,
-.main-footer {
+.main-footer,
+.page {
   width: calc((1 - (50/320)) * 100%);
   margin: 0 auto;
   margin-bottom: calc( 60px + 240 * ((100vw - 576px) / 624) ); }
@@ -111,7 +112,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       margin-bottom: 60px; } }
   @media (min-width: 1200px) {
     .intro,
@@ -120,7 +122,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       margin-bottom: 300px; } }
   @media (min-width: 576px) {
     .intro,
@@ -129,7 +132,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       width: 85%; } }
   @media (min-width: 768px) {
     .intro,
@@ -138,7 +142,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       width: 70%; } }
   @media (min-width: 992px) {
     .intro,
@@ -147,7 +152,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       width: 85%; } }
   @media (min-width: 1200px) {
     .intro,
@@ -156,7 +162,8 @@ img {
     .referenzen,
     .about,
     .kontakt,
-    .main-footer {
+    .main-footer,
+    .page {
       max-width: calc((1460/1920) * 100%); } }
 
 .main-footer {
