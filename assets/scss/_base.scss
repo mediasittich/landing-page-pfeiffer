@@ -45,7 +45,7 @@ $xl-desktop: 1800px;
 /* Fluid Typography Mixin*/
 /* https://codepen.io/dbox/pen/meaMba */
 
-@mixin fluid-type($text-attr, $min-size, $max-size, $lower-range: $lg-phone, $upper-range: $lg-desktop) {
+@mixin fluid-type($text-attr, $min-size, $max-size, $lower-range: $lg-phone, $upper-range: $xl-desktop) {
     #{$text-attr}: calc(
         #{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{ (($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1) )) })
     );

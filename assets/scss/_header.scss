@@ -38,8 +38,14 @@
 
     line-height: inherit;
     margin-bottom: 0;
-    @include fluid-type(padding-top, .5rem, 2.95rem, $lg-phone, $xl-desktop);
-    @include fluid-type(padding-bottom, .5rem, 2.95rem, $lg-phone, $xl-desktop);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    @include lg-phone-up {
+        @include fluid-type(padding-top, 1rem, 2.7rem, $lg-phone, $xl-desktop);
+        @include fluid-type(padding-bottom, 1rem, 2.7rem, $lg-phone, $xl-desktop);
+    }
+    
     @include fluid-type(padding-left, 1rem, 100px, $lg-phone, $xl-desktop);
 }
 
