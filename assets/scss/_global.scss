@@ -20,7 +20,9 @@ body {
     @include lg-phone-up {
         font-weight: $font-normal;
     }
+}
 
+h1, h2, h3, h4, h5, h6, p {
     overflow-wrap: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;

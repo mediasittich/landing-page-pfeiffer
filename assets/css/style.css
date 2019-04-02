@@ -26,13 +26,7 @@ body {
   font-weight: 300;
   color: #2A5848;
   letter-spacing: 0.02em;
-  line-height: calc( 1.3em + 0.3 * ((100vw - 576px) / 624) );
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto; }
+  line-height: calc( 1.3em + 0.3 * ((100vw - 576px) / 624) ); }
   @media (max-width: 576px) {
     body {
       line-height: 1.3em; } }
@@ -42,6 +36,14 @@ body {
   @media (min-width: 576px) {
     body {
       font-weight: 400; } }
+
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
