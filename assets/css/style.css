@@ -721,5 +721,34 @@ Main components
     opacity: 0; }
   100% {
     opacity: 1; } }
+.main-header {
+  background-color: #FFF;
+  color: #448B75;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .main-header {
+      height: 150px;
+      padding: auto 100px; } }
+
+.header-title {
+  font-size: 15px;
+  line-height: 20px; }
+  @media (min-width: 992px) {
+    .header-title {
+      line-height: 7.5rem; } }
+
+.menu-icon {
+  background-color: transparent;
+  border: none; }
+  .menu-icon img {
+    width: 31px;
+    height: 17.5px; }
+
+/* Navigation */
+.navigation {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

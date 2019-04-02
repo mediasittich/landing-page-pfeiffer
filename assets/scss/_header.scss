@@ -1,0 +1,46 @@
+.main-header {
+    background-color: $white;
+    color: $medium-green;
+    // margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    
+
+    @include tablet-up {
+        // margin: 0 100px;
+        // line-height: 7.5rem;
+        height: 150px;
+        padding: auto 100px;
+    }
+}
+
+.header-title {
+    font-size: 15px;
+    line-height: 20px;
+
+    @include desktop-up {
+        // font-size: 1.5rem;
+        line-height: 7.5rem;
+    }
+}
+
+.menu-icon {
+    background-color: transparent;
+    border: none;
+    img {
+        width: 31px;
+        height: 17.5px;
+    }
+   
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: none;
+}
+
+.navlink {}
