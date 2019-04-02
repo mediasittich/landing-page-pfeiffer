@@ -23,6 +23,19 @@
 .header-title {
     grid-column: 1 / 4;
     @include fluid-type(font-size, 1rem, $heading-font-size-lg);
+
+    color: $medium-green;
+    text-transform: uppercase;
+    font-weight: $font-normal;
+    font-style: normal;
+    letter-spacing: $heading-letter-spacing;
+
+    @include lg-phone-up {
+        font-weight: $font-bold;
+    }
+
+    @include fluid-type(line-height, $heading-line-height-sm, $heading-line-height-lg);
+
     line-height: inherit;
     margin-bottom: 0;
     @include fluid-type(padding-top, .5rem, 2.95rem, $lg-phone, $xl-desktop);

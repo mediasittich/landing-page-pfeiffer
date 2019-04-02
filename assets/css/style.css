@@ -743,6 +743,12 @@ Main components
 .header-title {
   grid-column: 1 / 4;
   font-size: calc( 1rem + 1 * ((100vw - 576px) / 624) );
+  color: #448B75;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.22em;
+  line-height: calc( 1.25em + -0.125 * ((100vw - 576px) / 624) );
   line-height: inherit;
   margin-bottom: 0;
   padding-top: calc( 0.5rem + 2.45 * ((100vw - 576px) / 1224) );
@@ -754,6 +760,15 @@ Main components
   @media (min-width: 1200px) {
     .header-title {
       font-size: 2rem; } }
+  @media (min-width: 576px) {
+    .header-title {
+      font-weight: 500; } }
+  @media (max-width: 576px) {
+    .header-title {
+      line-height: 1.25em; } }
+  @media (min-width: 1200px) {
+    .header-title {
+      line-height: 1.125em; } }
   @media (max-width: 576px) {
     .header-title {
       padding-top: 0.5rem; } }
