@@ -1,4 +1,9 @@
-#datenschutz .main-header {}
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
 .main-header {
     // border: 1px solid deeppink;
