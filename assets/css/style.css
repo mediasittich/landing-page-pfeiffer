@@ -187,11 +187,7 @@ Modules - reusable parts of our design
 
 .word-break {
   overflow-wrap: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto; }
+  word-wrap: break-word; }
 
 /* Components */
 /* Landing Section */
@@ -730,14 +726,13 @@ Main components
   100% {
     opacity: 1; } }
 .main-header {
-  border: 1px solid deeppink;
   background-color: #FFF;
   color: #448B75;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-columns: repeat(5, 1fr) 3rem; }
   .main-header > .menu-btn {
-    border: 2px solid limegreen; }
+    background-color: limegreen; }
 
 .header-title {
   grid-column: 1 / 4;
@@ -773,7 +768,8 @@ Main components
       padding-left: 100px; } }
 
 .menu-btn {
-  grid-column: 6 / 7; }
+  grid-column: 6 / 7;
+  cursor: pointer; }
 
 /* Navigation */
 .navigation {
@@ -799,15 +795,23 @@ h3 {
     .spaced {
       margin-bottom: 2.5rem; } }
 
-.page a {
-  letter-spacing: inherit;
-  font-style: normal; }
-.page ul {
-  list-style-type: none;
-  padding-left: 1em; }
-  .page ul li::before {
-    content: '-';
-    position: absolute;
-    margin-left: -1em; }
+.page {
+  margin-top: calc( 60px + 240 * ((100vw - 576px) / 624) ); }
+  @media (max-width: 576px) {
+    .page {
+      margin-top: 60px; } }
+  @media (min-width: 1200px) {
+    .page {
+      margin-top: 300px; } }
+  .page a {
+    letter-spacing: inherit;
+    font-style: normal; }
+  .page ul {
+    list-style-type: none;
+    padding-left: 1em; }
+    .page ul li::before {
+      content: '-';
+      position: absolute;
+      margin-left: -1em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,13 +1,13 @@
 .main-header {
-    border: 1px solid deeppink;
+    // border: 1px solid deeppink;
     background-color: $white;
     color: $medium-green;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr) 3rem;
 
     & > .menu-btn {
-        border: 2px solid limegreen;
+        background-color: limegreen;
     }
     
     @include tablet-up {
@@ -37,6 +37,7 @@
 
 .menu-btn {
     grid-column: 6 / 7;
+    cursor: pointer;
     // background-color: transparent;
     // border: none;
     // @include fluid-type(line-height, 20px, 100px);

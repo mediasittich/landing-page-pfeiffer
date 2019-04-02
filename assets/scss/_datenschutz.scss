@@ -9,10 +9,13 @@ h3 {
 }
 
 .page {
+    @include fluid-type(margin-top, 60px, 300px);
+
     a { 
         letter-spacing: inherit; 
         font-style: normal;
     }
+    
     ul {
         list-style-type: none;
         padding-left: 1em;

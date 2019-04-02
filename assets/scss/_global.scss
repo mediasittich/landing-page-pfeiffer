@@ -109,8 +109,8 @@ Modules - reusable parts of our design
 .word-break {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
+    // -webkit-hyphens: auto;
+    // -ms-hyphens: auto;
+    // -moz-hyphens: auto;
+    // hyphens: auto;
 }
