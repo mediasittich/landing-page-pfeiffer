@@ -771,6 +771,9 @@ Main components
   grid-column: 6 / 7;
   cursor: pointer; }
 
+.menu-btn {
+  display: block; }
+
 /* Navigation */
 .navigation {
   display: none; }

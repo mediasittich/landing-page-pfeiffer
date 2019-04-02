@@ -1,3 +1,5 @@
+#datenschutz .main-header {}
+
 .main-header {
     // border: 1px solid deeppink;
     background-color: $white;
@@ -10,29 +12,17 @@
         background-color: limegreen;
     }
     
-    @include tablet-up {
-        // margin: 0 100px;
-        // line-height: 7.5rem;
-        // height: 150px;
-        // padding: auto 100px;
-    }
+    @include tablet-up {}
 }
 
 .header-title {
     grid-column: 1 / 4;
-    // flex: 2;
-    // display: inline-block;
     @include fluid-type(font-size, 1rem, $heading-font-size-lg);
-    // @include fluid-type(line-height, 20px, 100px);
     line-height: inherit;
     margin-bottom: 0;
     @include fluid-type(padding-top, .5rem, 2.95rem, $lg-phone, $xl-desktop);
     @include fluid-type(padding-bottom, .5rem, 2.95rem, $lg-phone, $xl-desktop);
     @include fluid-type(padding-left, 1rem, 100px, $lg-phone, $xl-desktop);
-
-    // @include desktop-up {
-    //     line-height: 7.5rem;
-    // }
 }
 
 .menu-btn {
@@ -52,23 +42,10 @@
     // height: 100%;
     // @include fluid-type(height, 1.1rem, $heading-font-size-lg);
     // background-color: rgba(216, 216, 216, 0.4);
-    
-    // background-color: transparent;
-    // border: none;
-    // .menu-icon {
-    //     display: inline-block;
-    //     // display: flex;
-    //     // padding-right: 1rem;
-    //     @include fluid-type(padding-right, 1rem, 100px, $lg-phone, $xl-desktop);
-    //     // background-color: rgba(216, 216, 216, 0.4);
-    //     // width: 31px;
-    //     // height: 17.5px;
-
-    // }
 }
 
 .menu-btn {
-    // display: block;
+    display: block;
     // // display: flex;
     // // align-items: center;
     // // justify-content: flex-end;
