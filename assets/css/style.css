@@ -737,8 +737,6 @@ Main components
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr) 3rem; }
-  .main-header > .menu-btn {
-    background-color: limegreen; }
 
 .header-title {
   grid-column: 1 / 4;
@@ -790,10 +788,56 @@ Main components
 
 .menu-btn {
   grid-column: 6 / 7;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  right: calc( 1rem + 99 * ((100vw - 576px) / 1224) );
+  width: calc( 2.75rem + 1.5 * ((100vw - 576px) / 1224) );
+  height: 100%; }
+  @media (max-width: 576px) {
+    .menu-btn {
+      right: 1rem; } }
+  @media (min-width: 1800px) {
+    .menu-btn {
+      right: 100px; } }
+  @media (max-width: 576px) {
+    .menu-btn {
+      width: 2.75rem; } }
+  @media (min-width: 1800px) {
+    .menu-btn {
+      width: 4.25rem; } }
 
-.menu-btn {
-  display: block; }
+.menu-btn a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: calc( 2.75rem + 1.5 * ((100vw - 576px) / 1224) );
+  height: calc( 2rem + 1.087 * ((100vw - 576px) / 1224) );
+  background-image: url("../icons/Menue.svg");
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media (max-width: 576px) {
+    .menu-btn a {
+      width: 2.75rem; } }
+  @media (min-width: 1800px) {
+    .menu-btn a {
+      width: 4.25rem; } }
+  @media (max-width: 576px) {
+    .menu-btn a {
+      height: 2rem; } }
+  @media (min-width: 1800px) {
+    .menu-btn a {
+      height: 3.087rem; } }
+
+.cd-item-navigation a.visible {
+  display: block;
+  -webkit-animation: cd-fade-in 0.4s;
+  -moz-animation: cd-fade-in 0.4s;
+  animation: cd-fade-in 0.4s; }
 
 /* Navigation */
 .navigation {

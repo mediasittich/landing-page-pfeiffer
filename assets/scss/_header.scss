@@ -14,7 +14,7 @@
     grid-template-columns: repeat(5, 1fr) 3rem;
 
     & > .menu-btn {
-        background-color: limegreen;
+        // background-color: limegreen;
     }
     
     @include tablet-up {}
@@ -46,47 +46,36 @@
 .menu-btn {
     grid-column: 6 / 7;
     cursor: pointer;
-    // background-color: transparent;
-    // border: none;
-    // @include fluid-type(line-height, 20px, 100px);
-    // position: absolute;
-    // top: 50%;
-    // -webkit-transform: translateY(-50%);
-    // -moz-transform: translateY(-50%);
-    // -ms-transform: translateY(-50%);
-    // -o-transform: translateY(-50%);
-    // transform: translateY(-50%);
-    // width: 10%;
-    // height: 100%;
-    // @include fluid-type(height, 1.1rem, $heading-font-size-lg);
-    // background-color: rgba(216, 216, 216, 0.4);
+    // border: 1px solid deeppink;
+    position: relative;
+    @include fluid-type(right, 1rem, 100px, $lg-phone, $xl-desktop);
+    @include fluid-type(width, 2.75rem, 4.25rem, $lg-phone, $xl-desktop);
+    height: 100%;
 }
 
-.menu-btn {
+.menu-btn a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include fluid-type(width, 2.75rem, 4.25rem, $lg-phone, $xl-desktop);
+    @include fluid-type(height, 2rem, 3.087rem, $lg-phone, $xl-desktop);
+    background-image: url("../icons/Menue.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .cd-item-navigation a.visible {
     display: block;
-    // // display: flex;
-    // // align-items: center;
-    // // justify-content: flex-end;
-    
-    // // background-color: rgba(216, 216, 216, 0.4);
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // z-index: 10;
-    // cursor: pointer;
-
-    // &.btn-open {
-    //     background-image: url("../icons/Menue.svg");
-    //     width: 2rem;
-    //     height: 2rem;
-    // }
-    
-    // &.btn-close {
-    //     background-image: url("../icons/Kreuz_schliessen.svg");
-    //     display: none;
-    // }
-}
-
-
+    -webkit-animation: cd-fade-in 0.4s;
+    -moz-animation: cd-fade-in 0.4s;
+    animation: cd-fade-in 0.4s;
+  }
 
 
 /* Navigation */
