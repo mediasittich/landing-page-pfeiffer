@@ -2,17 +2,6 @@
 html { overflow-x: hidden; }
 
 /* -------------------------------- 
-Modules - reusable parts of our design
--------------------------------- */
-.cd-img-replace {
-/* replace text with background images */
-    display: inline-block;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-
-/* -------------------------------- 
 Main components 
 -------------------------------- */
 .stack-container {

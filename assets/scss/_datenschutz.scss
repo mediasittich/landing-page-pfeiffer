@@ -1,0 +1,26 @@
+h3 {
+    text-transform: initial;
+    font-style: italic;
+    @include fluid-type(margin-top, 1rem, 2.5rem);
+}
+
+.spaced {
+    @include fluid-type(margin-bottom, 1rem, 2.5rem);
+}
+
+.page {
+    a { 
+        letter-spacing: inherit; 
+        font-style: normal;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 1em;
+
+        li::before {
+            content: '-';
+            position: absolute;
+            margin-left: -1em;
+        }
+    }
+}

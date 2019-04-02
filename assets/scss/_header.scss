@@ -1,40 +1,96 @@
 .main-header {
+    border: 1px solid deeppink;
     background-color: $white;
     color: $medium-green;
-    // margin: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
     width: 100%;
-    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 
+    & > .menu-btn {
+        border: 2px solid limegreen;
+    }
+    
     @include tablet-up {
         // margin: 0 100px;
         // line-height: 7.5rem;
-        height: 150px;
-        padding: auto 100px;
+        // height: 150px;
+        // padding: auto 100px;
     }
 }
 
 .header-title {
-    font-size: 15px;
-    line-height: 20px;
+    grid-column: 1 / 4;
+    // flex: 2;
+    // display: inline-block;
+    @include fluid-type(font-size, 1rem, $heading-font-size-lg);
+    // @include fluid-type(line-height, 20px, 100px);
+    line-height: inherit;
+    margin-bottom: 0;
+    @include fluid-type(padding-top, .5rem, 2.95rem, $lg-phone, $xl-desktop);
+    @include fluid-type(padding-bottom, .5rem, 2.95rem, $lg-phone, $xl-desktop);
+    @include fluid-type(padding-left, 1rem, 100px, $lg-phone, $xl-desktop);
 
-    @include desktop-up {
-        // font-size: 1.5rem;
-        line-height: 7.5rem;
-    }
+    // @include desktop-up {
+    //     line-height: 7.5rem;
+    // }
 }
 
-.menu-icon {
-    background-color: transparent;
-    border: none;
-    img {
-        width: 31px;
-        height: 17.5px;
-    }
-   
+.menu-btn {
+    grid-column: 6 / 7;
+    // background-color: transparent;
+    // border: none;
+    // @include fluid-type(line-height, 20px, 100px);
+    // position: absolute;
+    // top: 50%;
+    // -webkit-transform: translateY(-50%);
+    // -moz-transform: translateY(-50%);
+    // -ms-transform: translateY(-50%);
+    // -o-transform: translateY(-50%);
+    // transform: translateY(-50%);
+    // width: 10%;
+    // height: 100%;
+    // @include fluid-type(height, 1.1rem, $heading-font-size-lg);
+    // background-color: rgba(216, 216, 216, 0.4);
+    
+    // background-color: transparent;
+    // border: none;
+    // .menu-icon {
+    //     display: inline-block;
+    //     // display: flex;
+    //     // padding-right: 1rem;
+    //     @include fluid-type(padding-right, 1rem, 100px, $lg-phone, $xl-desktop);
+    //     // background-color: rgba(216, 216, 216, 0.4);
+    //     // width: 31px;
+    //     // height: 17.5px;
+
+    // }
 }
+
+.menu-btn {
+    // display: block;
+    // // display: flex;
+    // // align-items: center;
+    // // justify-content: flex-end;
+    
+    // // background-color: rgba(216, 216, 216, 0.4);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // z-index: 10;
+    // cursor: pointer;
+
+    // &.btn-open {
+    //     background-image: url("../icons/Menue.svg");
+    //     width: 2rem;
+    //     height: 2rem;
+    // }
+    
+    // &.btn-close {
+    //     background-image: url("../icons/Kreuz_schliessen.svg");
+    //     display: none;
+    // }
+}
+
+
 
 
 /* Navigation */
