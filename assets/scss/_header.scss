@@ -6,25 +6,18 @@
 }
 
 .main-header {
-    // border: 1px solid deeppink;
     background-color: $white;
-    color: $medium-green;
+    color: $light-green;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr) 3rem;
-
-    & > .menu-btn {
-        // background-color: limegreen;
-    }
-    
-    @include tablet-up {}
 }
 
 .header-title {
     grid-column: 1 / 4;
     @include fluid-type(font-size, 1rem, $heading-font-size-lg);
 
-    color: $medium-green;
+    color: $light-green;
     text-transform: uppercase;
     font-weight: $font-normal;
     font-style: normal;
@@ -52,7 +45,6 @@
 .menu-btn {
     grid-column: 6 / 7;
     cursor: pointer;
-    // border: 1px solid deeppink;
     position: relative;
     @include fluid-type(right, 1rem, 100px, $lg-phone, $xl-desktop);
     @include fluid-type(width, 2.75rem, 4.25rem, $lg-phone, $xl-desktop);
@@ -87,7 +79,26 @@
 /* Navigation */
 
 .navigation {
-    display: none;
+    // display: none;
+    border: 1px solid $light-green;
+    background-color: $white;
+    padding: 0 50px 75px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    @include lg-phone-up {
+        width: 22.5rem;
+    }
+    
 }
 
-.navlink {}
+.navlink {
+    color: $light-green;
+    text-transform: uppercase;
+    font-weight: $font-normal;
+    font-style: normal;
+    letter-spacing: $heading-letter-spacing;
+    @include fluid-type(font-size, 1rem, $heading-font-size-lg);
+    @include fluid-type(line-height, 4.333333rem, 6rem);
+}

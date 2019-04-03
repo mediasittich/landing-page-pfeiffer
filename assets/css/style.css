@@ -733,7 +733,7 @@ Main components
 
 .main-header {
   background-color: #FFF;
-  color: #448B75;
+  color: #50A489;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr) 3rem; }
@@ -741,7 +741,7 @@ Main components
 .header-title {
   grid-column: 1 / 4;
   font-size: calc( 1rem + 1 * ((100vw - 576px) / 1224) );
-  color: #448B75;
+  color: #50A489;
   text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
@@ -846,7 +846,37 @@ Main components
 
 /* Navigation */
 .navigation {
-  display: none; }
+  border: 1px solid #50A489;
+  background-color: #FFF;
+  padding: 0 50px 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90vw; }
+  @media (min-width: 576px) {
+    .navigation {
+      width: 22.5rem; } }
+
+.navlink {
+  color: #50A489;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.22em;
+  font-size: calc( 1rem + 1 * ((100vw - 576px) / 1224) );
+  line-height: calc( 4.333333rem + 1.666667 * ((100vw - 576px) / 1224) ); }
+  @media (max-width: 576px) {
+    .navlink {
+      font-size: 1rem; } }
+  @media (min-width: 1800px) {
+    .navlink {
+      font-size: 2rem; } }
+  @media (max-width: 576px) {
+    .navlink {
+      line-height: 4.333333rem; } }
+  @media (min-width: 1800px) {
+    .navlink {
+      line-height: 6rem; } }
 
 h3 {
   text-transform: initial;

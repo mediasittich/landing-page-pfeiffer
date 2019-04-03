@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+    /* Show More Text Button */
     
     $('#read-more-toggle').click(function() {
         var elem = $('#read-more-toggle').text();
@@ -14,4 +16,16 @@ $(document).ready(function() {
             $('#read-more-target').slideUp();
         }
     });
+
+    /* Burger Menu Button */
+
+    $('#menu').click(function() {
+        $this = this;
+
+        // Show/Hide Navigation
+        console.log($this)
+    })
 });
+
+
+
