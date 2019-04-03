@@ -622,38 +622,44 @@ Main components
   z-index: 2; }
 
 .active .stack__slide.cd-item-middle {
-  /* 3D effect on touch devices */
-  -webkit-transform: translate3d(0, 0, -1rem);
-  -moz-transform: translate3d(0, 0, -1rem);
-  -ms-transform: translate3d(0, 0, -1rem);
-  -o-transform: translate3d(0, 0, -1rem);
-  transform: translate3d(0, 0, -1rem);
   opacity: 1;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 576px) {
+    .active .stack__slide.cd-item-middle {
+      /* 3D effect on touch devices */
+      -webkit-transform: translate3d(0, 0, -1rem);
+      -moz-transform: translate3d(0, 0, -1rem);
+      -ms-transform: translate3d(0, 0, -1rem);
+      -o-transform: translate3d(0, 0, -1rem);
+      transform: translate3d(0, 0, -1rem); } }
 
 .stack__slide.cd-item-back {
   z-index: 1; }
 
 .active .stack__slide.cd-item-back {
-  /* 3D effect on touch devices */
-  -webkit-transform: translate3d(0, 0, -2rem);
-  -moz-transform: translate3d(0, 0, -2rem);
-  -ms-transform: translate3d(0, 0, -2rem);
-  -o-transform: translate3d(0, 0, -2rem);
-  transform: translate3d(0, 0, -2rem);
   opacity: 1;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 576px) {
+    .active .stack__slide.cd-item-back {
+      /* 3D effect on touch devices */
+      -webkit-transform: translate3d(0, 0, -2rem);
+      -moz-transform: translate3d(0, 0, -2rem);
+      -ms-transform: translate3d(0, 0, -2rem);
+      -o-transform: translate3d(0, 0, -2rem);
+      transform: translate3d(0, 0, -2rem); } }
 
 .stack__slide.cd-item-out {
   /* picture not visible - use this class in case you have more than 3 pictures per item */
   z-index: 0;
   opacity: 1;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translate3d(0, 0, -3rem);
-  -moz-transform: translate3d(0, 0, -3rem);
-  -ms-transform: translate3d(0, 0, -3rem);
-  -o-transform: translate3d(0, 0, -3rem);
-  transform: translate3d(0, 0, -3rem); }
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+  @media (min-width: 576px) {
+    .stack__slide.cd-item-out {
+      -webkit-transform: translate3d(0, 0, -3rem);
+      -moz-transform: translate3d(0, 0, -3rem);
+      -ms-transform: translate3d(0, 0, -3rem);
+      -o-transform: translate3d(0, 0, -3rem);
+      transform: translate3d(0, 0, -3rem); } }
 
 .stack__slide.move-right {
   -webkit-transform: translate3d(200px, 0, 0);

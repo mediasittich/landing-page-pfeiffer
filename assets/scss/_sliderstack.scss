@@ -79,12 +79,16 @@ Main components
     z-index: 2;
 }
 .active .stack__slide.cd-item-middle {
-/* 3D effect on touch devices */
--webkit-transform: translate3d(0, 0, -1rem);
--moz-transform: translate3d(0, 0, -1rem);
--ms-transform: translate3d(0, 0, -1rem);
--o-transform: translate3d(0, 0, -1rem);
-transform: translate3d(0, 0, -1rem);
+
+    @include lg-phone-up {
+        /* 3D effect on touch devices */
+        -webkit-transform: translate3d(0, 0, -1rem);
+        -moz-transform: translate3d(0, 0, -1rem);
+        -ms-transform: translate3d(0, 0, -1rem);
+        -o-transform: translate3d(0, 0, -1rem);
+        transform: translate3d(0, 0, -1rem);
+    }
+
 // opacity: .8;
 opacity: 1;
 box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -93,29 +97,33 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .active .stack__slide.cd-item-back {
-    /* 3D effect on touch devices */
-    -webkit-transform: translate3d(0, 0, -2rem);
-    -moz-transform: translate3d(0, 0, -2rem);
-    -ms-transform: translate3d(0, 0, -2rem);
-    -o-transform: translate3d(0, 0, -2rem);
-    transform: translate3d(0, 0, -2rem);
+    @include lg-phone-up {
+        /* 3D effect on touch devices */
+        -webkit-transform: translate3d(0, 0, -2rem);
+        -moz-transform: translate3d(0, 0, -2rem);
+        -ms-transform: translate3d(0, 0, -2rem);
+        -o-transform: translate3d(0, 0, -2rem);
+        transform: translate3d(0, 0, -2rem);
+    }
     // opacity: .4;
     opacity: 1;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
-  .stack__slide.cd-item-out {
+.stack__slide.cd-item-out {
     /* picture not visible - use this class in case you have more than 3 pictures per item */
     z-index: 0;
     // opacity: .2;
     opacity: 1;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translate3d(0, 0, -3rem);
-    -moz-transform: translate3d(0, 0, -3rem);
-    -ms-transform: translate3d(0, 0, -3rem);
-    -o-transform: translate3d(0, 0, -3rem);
-    transform: translate3d(0, 0, -3rem);
-  }
-  .stack__slide.move-right {
+    @include lg-phone-up {
+        -webkit-transform: translate3d(0, 0, -3rem);
+        -moz-transform: translate3d(0, 0, -3rem);
+        -ms-transform: translate3d(0, 0, -3rem);
+        -o-transform: translate3d(0, 0, -3rem);
+        transform: translate3d(0, 0, -3rem);
+    }
+}
+.stack__slide.move-right {
     -webkit-transform: translate3d(200px, 0, 0);
     -moz-transform: translate3d(200px, 0, 0);
     -ms-transform: translate3d(200px, 0, 0);
