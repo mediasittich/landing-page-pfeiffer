@@ -130,6 +130,7 @@
         font-size: 15px;
         margin-bottom: 0;
         text-transform: uppercase;
+        font-style: normal;
 
         @include xl-desktop-up {
             font-size: 30px;
