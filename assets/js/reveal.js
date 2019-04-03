@@ -20,11 +20,14 @@ $(document).ready(function() {
     /* Burger Menu Button */
 
     $('#menu').click(function() {
-        $this = this;
-
         // Show/Hide Navigation
-        console.log($this)
-    })
+        var navBar = $('#navbar').toggleClass('nav-open');
+    });
+
+    /* Close Navigation when Menu Item is clicked */
+    $('.navlink').click(function() {
+        var navBar = $('#navbar').toggleClass('nav-open');
+    });
 });
 
 

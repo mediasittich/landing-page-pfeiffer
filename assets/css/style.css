@@ -799,7 +799,8 @@ Main components
   position: relative;
   right: calc( 1rem + 99 * ((100vw - 576px) / 1224) );
   width: calc( 2.75rem + 1.5 * ((100vw - 576px) / 1224) );
-  height: 100%; }
+  height: 100%;
+  z-index: 10; }
   @media (max-width: 576px) {
     .menu-btn {
       right: 1rem; } }
@@ -840,14 +841,9 @@ Main components
     .menu-btn a {
       height: 3.087rem; } }
 
-.cd-item-navigation a.visible {
-  display: block;
-  -webkit-animation: cd-fade-in 0.4s;
-  -moz-animation: cd-fade-in 0.4s;
-  animation: cd-fade-in 0.4s; }
-
 /* Navigation */
 .navigation {
+  display: none;
   border: 1px solid #50A489;
   background-color: #FFF;
   padding: 0 50px 75px;
@@ -879,6 +875,11 @@ Main components
   @media (min-width: 1800px) {
     .navlink {
       line-height: 6rem; } }
+
+.navbar.nav-open .menu-btn a {
+  background-image: url("../icons/Kreuz_schliessen.svg"); }
+.navbar.nav-open .navigation {
+  display: block; }
 
 h3 {
   text-transform: initial;

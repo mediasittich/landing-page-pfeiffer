@@ -49,6 +49,7 @@
     @include fluid-type(right, 1rem, 100px, $lg-phone, $xl-desktop);
     @include fluid-type(width, 2.75rem, 4.25rem, $lg-phone, $xl-desktop);
     height: 100%;
+    z-index: 10;
 }
 
 .menu-btn a {
@@ -66,20 +67,20 @@
     background-image: url("../icons/Menue.svg");
     background-repeat: no-repeat;
     background-position: center center;
-  }
+}
 
-  .cd-item-navigation a.visible {
-    display: block;
-    -webkit-animation: cd-fade-in 0.4s;
-    -moz-animation: cd-fade-in 0.4s;
-    animation: cd-fade-in 0.4s;
-  }
+// .navigation a.visible {
+// display: block;
+// -webkit-animation: cd-fade-in 0.4s;
+// -moz-animation: cd-fade-in 0.4s;
+// animation: cd-fade-in 0.4s;
+// }
 
 
 /* Navigation */
 
 .navigation {
-    // display: none;
+    display: none;
     border: 1px solid $light-green;
     background-color: $white;
     padding: 0 50px 75px;
@@ -89,8 +90,7 @@
     width: 90vw;
     @include lg-phone-up {
         width: 22.5rem;
-    }
-    
+    } 
 }
 
 .navlink {
@@ -101,4 +101,16 @@
     letter-spacing: $heading-letter-spacing;
     @include fluid-type(font-size, 1rem, $heading-font-size-lg);
     @include fluid-type(line-height, 4.333333rem, 6rem);
+}
+
+
+.navbar.nav-open {
+    // Change SVG
+    .menu-btn a {
+        background-image: url("../icons/Kreuz_schliessen.svg");
+    }
+    // Display Navigation
+    .navigation {
+        display: block;
+    }
 }
