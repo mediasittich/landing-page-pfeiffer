@@ -1,56 +1,62 @@
-/* Lightbox */
+/* Lightbox - Custom Styles*/
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
+.lightboxOverlay {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, .9);
-    z-index: 1000;
-    overflow: auto;
-} 
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1001;
-
-    &:hover,
-    &:focus {
-        cursor: pointer;
-    }
+    z-index: 9999;
+    background-color: $white;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9;
+    display: none;
 }
 
-.modal-content {
-    border: 2px solid limegreen;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(../img/loading.gif) no-repeat;
 }
 
-.lb-img-container {
-    border: 2px solid deeppink;
-    width: calc((1 - (50/320)) * 100%);
-    max-height: 80%;
-    margin: auto;
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(../icons/Pfeil_links.svg) left 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
 
-    // img {
-    //     width: 100%;
-    //     margin: 10% 0;
-    // }
+  .lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(../icons/Pfeil_rechts.svg) right 48% no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
 
-    // @include lg-desktop-up {
-    //     max-width: calc((771/1920) * 100%);
-    // }
-}
+  .lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(../icons/Kreuz_schliessen.svg) top right no-repeat;
+    text-align: right;
+    outline: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
