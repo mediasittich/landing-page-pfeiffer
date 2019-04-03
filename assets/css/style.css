@@ -390,7 +390,8 @@ Modules - reusable parts of our design
 
 .flip-card__front h3 {
   font-size: 15px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-transform: uppercase; }
   @media (min-width: 1800px) {
     .flip-card__front h3 {
       font-size: 30px; } }

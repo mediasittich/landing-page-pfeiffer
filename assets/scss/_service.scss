@@ -129,6 +129,7 @@
     h3 {
         font-size: 15px;
         margin-bottom: 0;
+        text-transform: uppercase;
 
         @include xl-desktop-up {
             font-size: 30px;
