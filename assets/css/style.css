@@ -823,33 +823,36 @@ html.lb-disable-scrolling {
   cursor: pointer;
   display: block; }
 
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url(../icons/Pfeil_links.svg) left 48% no-repeat;
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  float: none;
+  width: 36px;
+  height: 66px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgba(216, 216, 216, 0.4);
+  background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: .8;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s; }
+
+.lb-nav a.lb-prev {
+  left: 0;
+  background-image: url("../icons/Pfeil_links.svg");
+  background-position-x: left; }
 
 .lb-nav a.lb-prev:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
 .lb-nav a.lb-next {
-  width: 64%;
   right: 0;
-  float: right;
-  background: url(../icons/Pfeil_rechts.svg) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: .8;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s; }
+  background-image: url("../icons/Pfeil_rechts.svg");
+  background-position-x: right; }
 
 .lb-nav a.lb-next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
