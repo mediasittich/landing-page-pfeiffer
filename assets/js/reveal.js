@@ -28,6 +28,17 @@ $(document).ready(function() {
     $('.navlink').click(function() {
         var navBar = $('#navbar').toggleClass('nav-open');
     });
+
+    $(window).scroll(function() {
+        var scrollHeight = $(document).height();
+        var scrollPosition = $(window).height() + $(window).scrollTop();
+
+        if ((scrollHeight - scrollPosition) / scrollHeight < 0.85) {
+            $('#navbar').slideDown();
+        } else {
+            $('#navbar').slideUp();
+        }
+    })
 });
 
 
