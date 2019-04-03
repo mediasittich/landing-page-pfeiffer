@@ -20,8 +20,9 @@
     <meta name="DC.Language" content="de">
     <title>Pfeiffer & Partner</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <link rel="stylesheet" href="./assets/css/slider.css"> -->
+
     <script src="./assets/js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 <body>
@@ -136,8 +137,8 @@
         <div class="produkte-slider slider-1 active">
             <div class="stack-container">
                 <ul class="cd-item-wrapper">
-                    <li class="stack__slide cd-item-front"><a href="#0"><img src="./assets/img/Stuhl_seitlich.jpg" alt="Preview image"></a></li>
-                    <li class="stack__slide cd-item-middle"><a href="#0"><img src="./assets/img/Stuhl_Front.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-front"><a href="./assets/img/Stuhl_seitlich.jpg" data-lightbox="slider1"><img src="./assets/img/Stuhl_seitlich.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-middle"><a href="./assets/img/Stuhl_Front.jpg" data-lightbox="slider1"><img src="./assets/img/Stuhl_Front.jpg" alt="Preview image"></a></li>
                     <!-- <li class="cd-item-out">...</li> -->
                 </ul> <!-- cd-item-wrapper -->
 
@@ -154,10 +155,10 @@
             <div class="stack-container">
                 <ul class="cd-item-wrapper"> <!-- <ul id="stack--2" class="stack stack--2"> -->
                     <!-- <li class="stack__slide"> -->
-                    <li class="stack__slide cd-item-front"><a href="#0"><img src="./assets/img/Tisch_Front.jpg" alt="Preview image"></a></li>
-                    <li class="stack__slide cd-item-middle"><a href="#0"><img src="./assets/img/Tisch_oben.jpg" alt="Preview image"></a></li>
-                    <li class="stack__slide cd-item-back"><a href="#0"><img src="./assets/img/Tisch_detail_01.jpg" alt="Preview image"></a></li>
-                    <li class="stack__slide cd-item-out"><a href="#0"><img src="./assets/img/Tisch_unten.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-front"><a href="./assets/img/Tisch_Front.jpg"  data-lightbox="slider2"><img src="./assets/img/Tisch_Front.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-middle"><a href="./assets/img/Tisch_oben.jpg" data-lightbox="slider2"><img src="./assets/img/Tisch_oben.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-back"><a href="./assets/img/Tisch_detail_01.jpg" data-lightbox="slider2"><img src="./assets/img/Tisch_detail_01.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-out"><a href="./assets/img/Tisch_unten.jpg" data-lightbox="slider2"><img src="./assets/img/Tisch_unten.jpg" alt="Preview image"></a></li>
                 </ul> <!-- cd-item-wrapper -->
         
                 <nav>
@@ -174,8 +175,8 @@
         <div class="produkte-slider slider-3 active">
             <div class="stack-container">
                 <ul class="cd-item-wrapper">
-                    <li class="stack__slide cd-item-front"><a href="#0"><img src="./assets/img/Leuchtenhalter_01.jpg" alt="Preview image"></a></li>
-                    <li class="stack__slide cd-item-middle"><a href="#0"><img src="./assets/img/Leuchtenhalter_02.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-front"><a href="./assets/img/Leuchtenhalter_01.jpg" data-lightbox="slider3"><img src="./assets/img/Leuchtenhalter_01.jpg" alt="Preview image"></a></li>
+                    <li class="stack__slide cd-item-middle"><a href="./assets/img/Leuchtenhalter_02.jpg" data-lightbox="slider3"><img src="./assets/img/Leuchtenhalter_02.jpg" alt="Preview image"></a></li>
                 </ul> <!-- cd-item-wrapper -->
 
                 <nav>
@@ -237,33 +238,9 @@
     </footer>
     <!-- / Footer -->
 
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <span class="close-btn" id="close-btn">
-            <img src="./assets/icons/Kreuz_schliessen.svg" alt="" srcset="">
-        </span>
-        <div class="modal-content">
-            <div class="lb-img-container" id="lb-img-container">
-                <!-- landscape -->
-                <!-- <img src="./assets/img/Tisch_Front.jpg" alt="Preview image"> -->
-
-                <!-- portrait -->
-                <img src="./assets/img/Leuchtenhalter_01.jpg" alt="Preview image">
-            </div>
-
-            <nav>
-                <ul class="cd-item-navigation">
-                    <li><a class="cd-img-replace visible" href="javascript:void(0);">Prev</a></li>
-                    <li><a class="cd-img-replace visible" href="javascript:void(0);">Next</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- / Modal -->
-
     <script src="./assets/js/jquery-2.1.1.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/reveal.js"></script>
-    <script src="./assets/js/lightbox.js"></script>
+    <script src="./assets/js/lightbox.min.js"></script>
 </body>
 </html>

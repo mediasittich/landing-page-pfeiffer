@@ -26,9 +26,9 @@
         modal.style.display = 'none';
 
         // Remove Image from imgContainer
-        while(imgContainer.hasChildNodes()) {
-            imgContainer.removeChild(imgContainer.firstChild);
-        }
+        // while(imgContainer.hasChildNodes()) {
+        //     imgContainer.removeChild(imgContainer.firstChild);
+        // }
     }
 
 })(window);
