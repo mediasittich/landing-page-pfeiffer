@@ -1114,10 +1114,17 @@ html.lb-disable-scrolling {
   border: 1px solid #50A489;
   background-color: #FFF;
   padding: 0 50px 75px;
+  padding-top: calc( 4.333333rem + 1.666667 * ((100vw - 576px) / 1224) );
   position: absolute;
   top: 0;
   right: 0;
   width: 90vw; }
+  @media (max-width: 576px) {
+    .navigation {
+      padding-top: 4.333333rem; } }
+  @media (min-width: 1800px) {
+    .navigation {
+      padding-top: 6rem; } }
   @media (min-width: 576px) {
     .navigation {
       width: 22.5rem; } }

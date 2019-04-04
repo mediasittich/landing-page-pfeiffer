@@ -88,6 +88,7 @@
     border: 1px solid $light-green;
     background-color: $white;
     padding: 0 50px 75px;
+    @include fluid-type(padding-top, 4.333333rem, 6rem);
     position: absolute;
     top: 0;
     right: 0;
