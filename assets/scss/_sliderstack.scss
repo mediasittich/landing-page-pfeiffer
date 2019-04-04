@@ -143,23 +143,30 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   
 .cd-item-navigation a {
     position: absolute;
-    top: 50%;
+    bottom: 0;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 36px;
-    height: 66px;
-    background-color: rgba(216, 216, 216, 0.4);
+    width: 18px;
+    height: 33px;
+    // background-color: rgba(216, 216, 216, 0.4);
     background-image: url("../icons/Pfeil_rechts.svg");
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 4;
-    display: none;
+    display: block;
+    // display: none;
+
+    @include lg-phone-up {
+        top: 50%;
+        width: 36px;
+        height: 66px;
+    }
 }
 .no-touch .cd-item-navigation a:hover {
-    background-color: rgba(216, 216, 216, 0.6);
+    // background-color: rgba(216, 216, 216, 0.6);
 }
 .cd-item-navigation a.visible {
     display: block;
@@ -174,9 +181,41 @@ box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     -ms-transform: translateY(-50%) rotate(180deg);
     -o-transform: translateY(-50%) rotate(180deg);
     transform: translateY(-50%) rotate(180deg);
+
+    @include desktop-up {
+        left: -3rem;
+    }
+    @include lg-desktop-up {
+        left: -4rem;
+    }
+    @include xl-desktop-up {
+        left: -5.3rem;
+    }
 }
+.slider-2 .cd-item-navigation li:nth-child(1) a {
+    @include desktop-up {
+        left: -4.8rem;
+    }
+    @include lg-desktop-up {
+        left: -6.3rem;
+    }
+    @include xl-desktop-up {
+        left: -8.3rem;
+    }
+}
+
 .cd-item-navigation li:nth-child(2) a {
     right: 14px;
+
+    @include desktop-up {
+        right: -2.5rem;
+    }
+    @include lg-desktop-up {
+        right: -3.5rem;
+    }
+    @include xl-desktop-up {
+        right: -4.5rem;
+    }
 }
 .no-csstransitions .cd-item-navigation {
     display: none;

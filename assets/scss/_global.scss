@@ -114,3 +114,9 @@ Modules - reusable parts of our design
     // -moz-hyphens: auto;
     // hyphens: auto;
 }
+
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    pointer-events: none;
+}

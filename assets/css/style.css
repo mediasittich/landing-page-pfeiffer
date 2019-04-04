@@ -189,6 +189,11 @@ Modules - reusable parts of our design
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
+.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none; }
+
 /* Components */
 /* Landing Section */
 .landing {
@@ -680,23 +685,24 @@ Main components
 
 .cd-item-navigation a {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 36px;
-  height: 66px;
-  background-color: rgba(216, 216, 216, 0.4);
+  width: 18px;
+  height: 33px;
   background-image: url("../icons/Pfeil_rechts.svg");
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 4;
-  display: none; }
-
-.no-touch .cd-item-navigation a:hover {
-  background-color: rgba(216, 216, 216, 0.6); }
+  display: block; }
+  @media (min-width: 576px) {
+    .cd-item-navigation a {
+      top: 50%;
+      width: 36px;
+      height: 66px; } }
 
 .cd-item-navigation a.visible {
   display: block;
@@ -711,9 +717,37 @@ Main components
   -ms-transform: translateY(-50%) rotate(180deg);
   -o-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg); }
+  @media (min-width: 992px) {
+    .cd-item-navigation li:nth-child(1) a {
+      left: -3rem; } }
+  @media (min-width: 1200px) {
+    .cd-item-navigation li:nth-child(1) a {
+      left: -4rem; } }
+  @media (min-width: 1800px) {
+    .cd-item-navigation li:nth-child(1) a {
+      left: -5.3rem; } }
+
+@media (min-width: 992px) {
+  .slider-2 .cd-item-navigation li:nth-child(1) a {
+    left: -4.8rem; } }
+@media (min-width: 1200px) {
+  .slider-2 .cd-item-navigation li:nth-child(1) a {
+    left: -6.3rem; } }
+@media (min-width: 1800px) {
+  .slider-2 .cd-item-navigation li:nth-child(1) a {
+    left: -8.3rem; } }
 
 .cd-item-navigation li:nth-child(2) a {
   right: 14px; }
+  @media (min-width: 992px) {
+    .cd-item-navigation li:nth-child(2) a {
+      right: -2.5rem; } }
+  @media (min-width: 1200px) {
+    .cd-item-navigation li:nth-child(2) a {
+      right: -3.5rem; } }
+  @media (min-width: 1800px) {
+    .cd-item-navigation li:nth-child(2) a {
+      right: -4.5rem; } }
 
 .no-csstransitions .cd-item-navigation {
   display: none; }
