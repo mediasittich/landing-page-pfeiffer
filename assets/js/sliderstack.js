@@ -30,7 +30,6 @@ function showNextSlide(container) {
 	itemToShow.addClass('cd-item-front').removeClass('cd-item-middle');
 	itemMiddle.addClass('cd-item-middle').removeClass('cd-item-back');
 	itemToBack.addClass('cd-item-back').removeClass('cd-item-out');
-	console.log(container.find('.hidden').length === itemsLen - 2)
 }
 
 function showPreviousSlide(container) {

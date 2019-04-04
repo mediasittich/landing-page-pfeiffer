@@ -699,7 +699,7 @@ Main components
   background-position: center center;
   z-index: 4;
   display: block;
-  opacity: .4; }
+  opacity: .1; }
   @media (min-width: 576px) {
     .cd-item-navigation a {
       top: 50%;
