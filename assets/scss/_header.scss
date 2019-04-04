@@ -15,7 +15,9 @@
 
 .header-title {
     grid-column: 1 / 4;
-    @include fluid-type(font-size, 1rem, $heading-font-size-lg);
+    // @include fluid-type(font-size, 1rem, $heading-font-size-lg);
+    // @include fluid-type(font-size, $heading-font-size-sm, $heading-font-size-lg);
+    font-size: 1rem;
 
     color: $light-green;
     text-transform: uppercase;
@@ -25,9 +27,11 @@
 
     @include lg-phone-up {
         font-weight: $font-bold;
+        @include fluid-type(font-size, $heading-font-size-sm, $heading-font-size-lg);
+        @include fluid-type(line-height, $heading-line-height-sm, $heading-line-height-lg);
     }
 
-    @include fluid-type(line-height, $heading-line-height-sm, $heading-line-height-lg);
+    
 
     line-height: inherit;
     margin-bottom: 0;
@@ -35,11 +39,11 @@
     padding-bottom: .5rem;
 
     @include lg-phone-up {
-        @include fluid-type(padding-top, 1rem, 2.7rem, $lg-phone, $xl-desktop);
-        @include fluid-type(padding-bottom, 1rem, 2.7rem, $lg-phone, $xl-desktop);
+        @include fluid-type(padding-top, 1rem, 2.7rem);
+        @include fluid-type(padding-bottom, 1rem, 2.7rem);
     }
     
-    @include fluid-type(padding-left, 1rem, 100px, $lg-phone, $xl-desktop);
+    @include fluid-type(padding-left, 1rem, 100px);
 }
 
 .menu-btn {

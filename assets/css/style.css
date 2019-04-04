@@ -1007,33 +1007,35 @@ html.lb-disable-scrolling {
 
 .header-title {
   grid-column: 1 / 4;
-  font-size: calc( 1rem + 1 * ((100vw - 576px) / 1224) );
+  font-size: 1rem;
   color: #50A489;
   text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.22em;
-  line-height: calc( 1.25em + -0.125 * ((100vw - 576px) / 1224) );
   line-height: inherit;
   margin-bottom: 0;
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: calc( 1rem + 99 * ((100vw - 576px) / 1224) ); }
-  @media (max-width: 576px) {
-    .header-title {
-      font-size: 1rem; } }
-  @media (min-width: 1800px) {
-    .header-title {
-      font-size: 2rem; } }
   @media (min-width: 576px) {
     .header-title {
-      font-weight: 500; } }
-  @media (max-width: 576px) {
+      font-weight: 500;
+      font-size: calc( 1.6rem + 0.4 * ((100vw - 576px) / 1224) );
+      line-height: calc( 1.25em + -0.125 * ((100vw - 576px) / 1224) ); } }
+  @media (min-width: 576px) and (max-width: 576px) {
+    .header-title {
+      font-size: 1.6rem; } }
+  @media (min-width: 576px) and (min-width: 1800px) {
+    .header-title {
+      font-size: 2rem; } }
+  @media (min-width: 576px) and (max-width: 576px) {
     .header-title {
       line-height: 1.25em; } }
-  @media (min-width: 1800px) {
+  @media (min-width: 576px) and (min-width: 1800px) {
     .header-title {
       line-height: 1.125em; } }
+
   @media (min-width: 576px) {
     .header-title {
       padding-top: calc( 1rem + 1.7 * ((100vw - 576px) / 1224) );
