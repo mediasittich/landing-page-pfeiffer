@@ -1,0 +1,24 @@
+nav#dot-nav {
+    display: none;
+
+    @include xl-desktop-up {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 10000;
+    }
+}
+
+nav#dot-nav a {
+    border: 1px solid $light-green;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin: 10px;
+}
+
+nav#dot-nav a.active {
+    background: $light-green;
+}

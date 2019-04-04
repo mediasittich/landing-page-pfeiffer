@@ -1196,4 +1196,25 @@ h3 {
       position: absolute;
       margin-left: -1em; }
 
+nav#dot-nav {
+  display: none; }
+  @media (min-width: 1800px) {
+    nav#dot-nav {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 10000; } }
+
+nav#dot-nav a {
+  border: 1px solid #50A489;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: block;
+  margin: 10px; }
+
+nav#dot-nav a.active {
+  background: #50A489; }
+
 /*# sourceMappingURL=style.css.map */
