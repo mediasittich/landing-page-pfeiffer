@@ -3,7 +3,9 @@ jQuery(document).ready(function($){
 		galleryNavigation = $('.cd-item-navigation a');
 
 	//change image in the slider
-	galleryNavigation.on('click', function(){
+	galleryNavigation.on('click', function( event ){
+		event.preventDefault();
+
 		var navigationAnchor = $(this);
 			direction = navigationAnchor.text(),
 			activeContainer = navigationAnchor.parents('nav').eq(0).siblings('.cd-item-wrapper');
@@ -18,13 +20,17 @@ function showNextSlide(container) {
 		itemToShow = container.find('.cd-item-middle'),
 		itemMiddle = container.find('.cd-item-back'),
 		itemToBack = container.find('.cd-item-out').eq(0);
+	
+	var itemsLen = container.children('li').length;
 
 	itemToHide.addClass('move-right').removeClass('cd-item-front').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 		itemToHide.addClass('hidden');
 	});
+	
 	itemToShow.addClass('cd-item-front').removeClass('cd-item-middle');
 	itemMiddle.addClass('cd-item-middle').removeClass('cd-item-back');
 	itemToBack.addClass('cd-item-back').removeClass('cd-item-out');
+	console.log(container.find('.hidden').length === itemsLen - 2)
 }
 
 function showPreviousSlide(container) {
@@ -53,6 +59,6 @@ function showPreviousSlide(container) {
 function updateNavigation(navigation, container) {
 	var isNextActive = ( container.find('.cd-item-middle').length > 0 ) ? true : false,
 		isPrevActive = 	( container.children('li').eq(0).hasClass('cd-item-front') ) ? false : true;
-	(isNextActive) ? navigation.find('a').eq(1).addClass('visible') : navigation.find('a').eq(1).removeClass('visible');
-	(isPrevActive) ? navigation.find('a').eq(0).addClass('visible') : navigation.find('a').eq(0).removeClass('visible');
+	(isNextActive) ? navigation.find('a').eq(1).removeClass('disabled').addClass('visible') : navigation.find('a').eq(1).addClass('disabled').removeClass('visible');
+	(isPrevActive) ? navigation.find('a').eq(0).removeClass('disabled').addClass('visible') : navigation.find('a').eq(0).addClass('disabled').removeClass('visible');
 }

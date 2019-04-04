@@ -698,7 +698,8 @@ Main components
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 4;
-  display: block; }
+  display: block;
+  opacity: .4; }
   @media (min-width: 576px) {
     .cd-item-navigation a {
       top: 50%;
@@ -707,6 +708,7 @@ Main components
 
 .cd-item-navigation a.visible {
   display: block;
+  opacity: 1;
   -webkit-animation: cd-fade-in 0.4s;
   -moz-animation: cd-fade-in 0.4s;
   animation: cd-fade-in 0.4s; }
