@@ -38,6 +38,11 @@ $(document).ready(function() {
         } else {
             $('#navbar').slideUp();
         }
+        if ((scrollHeight - scrollPosition) / scrollHeight < 0.75) {
+            $('#dot-nav').show();
+        } else {
+            $('#dot-nav').hide();
+        }
     })
 });
 
