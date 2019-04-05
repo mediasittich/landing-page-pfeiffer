@@ -231,6 +231,9 @@ color: #4ae;
     @include desktop-up {
         transform: translate(4rem, -90%);
     }
+    @include xl-desktop-up {
+        transform: translate(25rem, -90%);
+    }
 
     @include fluid-type(width, 2.75rem, 4.25rem, $lg-phone, $xl-desktop);
     @include fluid-type(height, 2rem, 3.087rem, $lg-phone, $xl-desktop);

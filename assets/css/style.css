@@ -976,6 +976,9 @@ html.lb-disable-scrolling {
   @media (min-width: 992px) {
     .lb-data .lb-close {
       transform: translate(4rem, -90%); } }
+  @media (min-width: 1800px) {
+    .lb-data .lb-close {
+      transform: translate(25rem, -90%); } }
   @media (max-width: 576px) {
     .lb-data .lb-close {
       width: 2.75rem; } }
@@ -1204,7 +1207,7 @@ nav#dot-nav {
       position: fixed;
       right: 68px;
       top: 20px;
-      z-index: 10000; } }
+      z-index: 9998; } }
 
 nav#dot-nav a {
   border: 1px solid #50A489;
