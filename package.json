@@ -22,7 +22,7 @@
   "homepage": "https://github.com/mediasittich/landing-page-pfeiffer#readme",
   "dependencies": {
     "contentful": "^7.13.1",
-    "next": "^9.2.0",
+    "next": "^9.3.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }
