@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\n\nvar index = function index() {\n  return __jsx(\"div\", null, \" Hello Contentful \");\n};\n\nexport default index;","map":null,"metadata":{},"sourceType":"module"}
